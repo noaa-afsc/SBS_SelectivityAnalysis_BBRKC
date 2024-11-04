@@ -1,0 +1,14 @@
+.DS_Store
+*.RData
+*.html
+*.md
+*.pdf
+/q02_SedimentAnalyses_cache/
+/q02_SedimentAnalyses_files/
+/SedimentsAnalysis.gdb/
+/figures/
+/tables/
+r_ListForFiguresInfo.csv
+r_ListForTablesInfo.csv
+01_SedimentAnalyses
+02_SedimentAnalyses

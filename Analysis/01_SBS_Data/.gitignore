@@ -1,0 +1,12 @@
+.DS_Store
+*.RData
+*.html
+*.md
+*.pdf
+/q01_SBS_DataMethods_cache/
+/q01_SBS_DataMethods_files/
+/q02_SBS_DataResults_files/
+/figures/
+/tables/
+r_ListForFiguresInfo.csv
+r_ListForTablesInfo.csv
