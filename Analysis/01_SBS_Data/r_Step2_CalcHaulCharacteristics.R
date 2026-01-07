@@ -11,6 +11,10 @@ calcHaulCharacteristics<-function(){
   dirThs = file.path(dirPrj,"Analysis/01_SBS_Data");
   lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step1_SBS_RawData.RData"));
   
+  #--create helper functions to avoid NAs
+  Min<-function(x){min(x,na.rm=TRUE)};
+  Max<-function(x){max(x,na.rm=TRUE)};
+  
   #--extract areas swept, depth, and temperature----
   dfrADT = dplyr::bind_rows(
                 lst$dfrHD_BSFRF_SBS |> 
@@ -29,7 +33,7 @@ calcHaulCharacteristics<-function(){
   tblrADT = tabular(Factor(year) ~ (n=1)*Factor(gear) + 
                                    (`area swept`+
                                       Heading("bottom depth")*depth+
-                                      Heading("bottom temp.")*temp)*Factor(gear)*(min+max),
+                                      Heading("bottom temp.")*temp)*Factor(gear)*(Min+Max),
                     data=dfrADT);
   colLabels(tblrADT) = colLabels(tblrADT)[c(1,3,4),];
   colLabels(tblrADT)[1:3,1] = c("","","N");
@@ -47,17 +51,17 @@ calcHaulCharacteristics<-function(){
           tidyr::pivot_wider(id_cols=c("year","station"),
                              names_from="gear",values_from=c("area swept")) |> 
           dplyr::mutate(ratio=`NMFS`/`BSFRF`);
-  maxASR = max(dfrAS$ratio);
-  minASR = max(dfrAS$ratio);
-  mnAS = mean(dfrAS$ratio);
+  maxASR = max(dfrAS$ratio,na.rm=TRUE);
+  minASR = max(dfrAS$ratio,na.rm=TRUE);
+  mnAS = mean(dfrAS$ratio,na.rm=TRUE);
   out = c(out,list(dfrAS=dfrAS,maxASR=maxASR,minASR=minASR,mnAS=mnAS));
 
   #--calc stats for haul depths----
   dfrD = dfrADT |> 
           tidyr::pivot_wider(id_cols=c("year","station"),names_from="gear",values_from="depth");
-  minDiffD = min(dfrD$NMFS-dfrD$BSFRF);
-  maxDiffD = max(dfrD$NMFS-dfrD$BSFRF);
-  mnDiffD = mean(dfrD$NMFS-dfrD$BSFRF);
+  minDiffD = min(dfrD$NMFS-dfrD$BSFRF,na.rm=TRUE);
+  maxDiffD = max(dfrD$NMFS-dfrD$BSFRF,na.rm=TRUE);
+  mnDiffD = mean(dfrD$NMFS-dfrD$BSFRF,na.rm=TRUE);
   out = c(out,list(dfrD=dfrD,maxDiffD=maxDiffD,minDiffD=minDiffD,mnDiffD=mnDiffD));
 
   #--calc stats for bottom temperatures----
@@ -66,12 +70,12 @@ calcHaulCharacteristics<-function(){
           dplyr::mutate(diff=NMFS-BSFRF);
   dfrMaxDiffT = dfrT |> dplyr::filter(abs(diff)==max(abs(diff),na.rm=TRUE));
   mxDiffT = dfrMaxDiffT$diff;
-  minDiffTp = min((dfrT |> dplyr::filter(abs(diff)<abs(mxDiffT)))$diff);
-  maxDiffTp = max((dfrT |> dplyr::filter(abs(diff)<abs(mxDiffT)))$diff);
-  mnDiffTp  = mean((dfrT |> dplyr::filter(abs(diff)<abs(mxDiffT)))$diff);
+  minDiffTp = Min((dfrT |> dplyr::filter(abs(diff)<abs(mxDiffT)))$diff);
+  maxDiffTp = Max((dfrT |> dplyr::filter(abs(diff)<abs(mxDiffT)))$diff);
+  mnDiffTp  = mean((dfrT |> dplyr::filter(abs(diff)<abs(mxDiffT)))$diff,na.rm=TRUE);
   out = c(out,list(dfrT=dfrT,mxDiffT=mxDiffT,maxDiffTp=maxDiffTp,minDiffTp=minDiffTp,mnDiffTp=mnDiffTp));
 
-#| label: fig-AreasSwept
+  ##--#| label: fig-AreasSwept----
   cap = "Comparison of areas swept by the NMFS (x-axis) and BSFRF (y-axis) gear types. Each histogram is normalized by its maximum to show relative frequencies across bins."
   xmx = max(dfrAS$`NMFS`,na.rm=TRUE);
   ymx = max(dfrAS$`BSFRF`,na.rm=TRUE);
@@ -81,10 +85,11 @@ calcHaulCharacteristics<-function(){
                                   xparams=list(limits=c(0,xmx)),
                                   yparams=list(limits=c(0,ymx)),
                                   legend.position=c(0.01,0.99),
-                                  legend.justification=c(0,1));
+                                  legend.justification=c(0,1),
+                                  addValues=FALSE);
   out = c(out,list(figASs=list(p=p,cap=cap)));
   
-#| label: fig-AreasSweptRatios
+  ##--#| label: fig-AreasSweptRatios----
   cap = "Ratios of haul-specific area swept by the NMFS and BSFRFs gears."
   p = ggplot(dfrAS,aes(x=ratio)) + 
         geom_histogram() + 
@@ -94,7 +99,7 @@ calcHaulCharacteristics<-function(){
         wtsPlots::getStdTheme();
   out = c(out,list(figASRs=list(p=p,cap=cap)));
 
-#| label: fig-HaulDepths
+  ##--#| label: fig-HaulDepths----
   cap = "Comparison of the difference (NMFS-BSFRF) paired-haul depths, by NMFS haul depth. Colour indicates the year each haul was conducted. The smooth line (and shading) indcates the overall trend with depth. The dotted line indicates the mean difference."
   p = ggplot(dfrD,aes(x=NMFS,y=NMFS-BSFRF,colour=as.character(year))) + 
         geom_smooth(colour="black") + 
@@ -104,7 +109,7 @@ calcHaulCharacteristics<-function(){
         wtsPlots::getStdTheme() + theme(legend.position=c(0.01,0.99),legend.justification=c(0,1));
   out = c(out,list(figHDs=list(p=p,cap=cap)));
 
-#| label: fig-BottomTemps
+  ##--#| label: fig-BottomTemps----
   cap = "Comparison of measured bottom temperatures by paired haul, with the largest difference excluded to show detail. The difference (NMFS-BSFRF) between the paired haul depths is plotted against the NMFS haul depth. Colour indicates the year each haul was conducted. The smooth line (and shading) indcates the overall trend with depth. The inset shows the same, but with the largest difference included."
   p1 = ggplot(dfrT,
              aes(x=NMFS,y=NMFS-BSFRF,colour=as.character(year))) + 

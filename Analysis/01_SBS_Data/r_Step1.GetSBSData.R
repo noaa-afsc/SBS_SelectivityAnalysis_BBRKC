@@ -1,14 +1,14 @@
-#--extract trawl station info for BBRKC SBS study
+#--extract trawl station info for BBRKC SBS study----
 require(tcsamSurveyData);
 dirPrj = rstudioapi::getActiveProject();
 dirThs = file.path(dirPrj,"Analysis/01_SBS_Data");
 
-#--processing info
+##--processing info----
 minYr = 2013;
 maxYr = 2016;
 verbosity = 0;
 
-#--read NMFS strata definitions for RKC in standard format
+##--read NMFS strata definitions for RKC in standard format----
 dirData_NMFS   <-"~/Work/StockAssessments-Crab/Data/Survey.NMFS.EBS/Current";
 fnStrata       <-file.path(dirData_NMFS,"AllCrab_SurveyStrata.csv");
 dfrStrata<-readr::read_csv(fnStrata) |>
@@ -23,7 +23,7 @@ dfrSD<-selectStrata.TrawlSurvey(dfrStrata,
          dplyr::filter(dplyr::between(YEAR,minYr,maxYr));
 rm(dfrStrata);
 
-#--read McConnaughey haul csv files
+##--read McConnaughey haul csv files----
 dfr_haul = readr::read_csv(file.path(dirThs,"data/final_haul.csv")) |> 
              dplyr::mutate(STRATUM="SBS",
                            MID_LATITUDE=0.5*(start_latitude+end_latitude),
@@ -41,21 +41,21 @@ dfr_haul = readr::read_csv(file.path(dirThs,"data/final_haul.csv")) |>
                            GEAR_TEMPERATURE=gear_temp,
                            BOTTOM_DEPTH=gear_depth);
 
-#--extract distinct SBS station data in standard format, 
-#----dropping 19 stations not in the Bristol Bay stratum
+##--extract distinct SBS station data in standard format---- 
+###--dropping 19 stations not in the Bristol Bay stratum----
 dfrSD_SBS = dfrSD |> dplyr::right_join(dfr_haul |> dplyr::distinct(YEAR, GIS_STATION),
                                        by=c("YEAR", "GIS_STATION")) |> 
                      dplyr::filter(STRATUM=="Bristol Bay");
 
-#--extract NMFS haul data
+##--extract NMFS haul data----
 dfrHD_NMFS_SBS = dfr_haul |> dplyr::filter(type=="NMFS") |> dplyr::select(!type);
-#--extract BSFRF haul data
+##--extract BSFRF haul data----
 dfrHD_BSFRF_SBS = dfr_haul |> dplyr::filter(type=="BSFRF") |> dplyr::select(!type);
 
-#--read McConnaughey combined data csv files
+##--read McConnaughey combined data csv files----
 dfr_cd = readr::read_csv(file.path(dirThs,"data/final_rkc_sr_melt_acoustic.csv")) |> 
            dplyr::select(HAULJOIN=pairnum,SIZE=length,freq.BSFRF,freq.NMFS);
-#--extract NMFS ID data
+###--extract NMFS ID data----
 dfrID_NMFS_SBS = dfr_cd |> dplyr::select(HAULJOIN,
                                          numIndivs=freq.NMFS,
                                          SIZE) |> 
@@ -89,7 +89,7 @@ dfrID_BSFRF_SBS = dfr_cd |> dplyr::select(HAULJOIN,
                                  CALCULATED_WEIGHT=0) |> 
                     dplyr::filter(numIndivs>0);
 
-  #--save the SBS data objects
+  ##--save the SBS data objects----
   lstSBS = list(minYr=minYr,
                 maxYr=maxYr,
                 sex="UNDETERMINED",
