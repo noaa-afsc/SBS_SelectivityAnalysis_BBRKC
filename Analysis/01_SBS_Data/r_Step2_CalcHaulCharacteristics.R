@@ -7,7 +7,9 @@ calcHaulCharacteristics<-function(){
   out = list();
 
   #--get haul-level areas swept, depth, and temperature data
-  lst = wtsUtilities::getObj("rda_Step1_SBS_RawData.RData");
+  dirPrj = rstudioapi::getActiveProject();
+  dirThs = file.path(dirPrj,"Analysis/01_SBS_Data");
+  lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step1_SBS_RawData.RData"));
   
   #--extract areas swept, depth, and temperature----
   dfrADT = dplyr::bind_rows(
@@ -127,7 +129,7 @@ calcHaulCharacteristics<-function(){
   out = c(out,list(figBTs=list(p=p2,cap=cap)));
   
   #--save results
-  wtsUtilities::saveObj(out,"rda_Step2_SBS_ADTs.RData");
+  wtsUtilities::saveObj(out,file.path(dirThs,"rda_Step2_SBS_ADTs.RData"));
   return(out);
 }
 #--run function

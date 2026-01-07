@@ -1,4 +1,5 @@
 #--calculate empirical selectivity from size composition results
+#----set working directory to file location
 
 #--list for output results
 out = list();
@@ -31,10 +32,8 @@ plotEmpSel<-function(dfr,qty,sex,ylab="Empirical Selectivity (NMFS/BSFRF)",xlim=
   return(p);
 }
 
-plotEmpSel(dfrBootEmpSels,emp_sel,"male",  xlim=185,ylim=3);
-plotEmpSel(dfrBootEmpSels,emp_sel,"female",xlim=135,ylim=3);
-plotEmpSel(dfrBootEmpSels,emp_prp,"male",  xlim=185,ylim=1,"Empirical Proportion (NMFS/(NMFS+BSFRF))");
-plotEmpSel(dfrBootEmpSels,emp_prp,"female",xlim=135,ylim=1,"Empirical Proportion (NMFS/(NMFS+BSFRF))");
+plotEmpSel(dfrBootEmpSels,emp_sel,"all",  xlim=205,ylim=3);
+plotEmpSel(dfrBootEmpSels,emp_prp,"all",  xlim=205,ylim=1,"Empirical Proportion (NMFS/(NMFS+BSFRF))");
 
   #--compute statistics for bootstrapped empriical selectivities and proportions----
 calcStats<-function(qty){
@@ -70,7 +69,6 @@ plotStats<-function(sex,xlim=185){
                 legend.justification=c(1,1));
   return(p)
 }
-plotStats("male",xlim=185)
-plotStats("female",xlim=135)
+plotStats("all",xlim=205)
 
 #--weights??: number of crab sampled in BSFRF

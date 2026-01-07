@@ -3,6 +3,7 @@ extractHaulsAndIndivs<-function(dfrSDr,dfrHD,dfrID,resampleIndivs=FALSE){
   qry<- "select * from dfrSDr order by GIS_STATION;";
   dfrSDr<-sqldf::sqldf(qry);
   #--select resampled hauls
+  dfrHD = dfrHD |> dplyr::select(!START_HOUR);#--need to drop this: sql throws error
   hdvars<-paste0("h.",names(dfrHD),collapse=",");
   qry<-"select
           &&hdvars

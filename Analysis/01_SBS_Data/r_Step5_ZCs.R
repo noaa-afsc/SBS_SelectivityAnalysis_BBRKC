@@ -1,6 +1,9 @@
-#--calculate survey size comps
+#--calculate survey size comps & do bootstrapping
+#----working directory should be same as this file 
 
-doStep5<-function(){
+doStep5<-function(doBootstrapping=FALSE,  #--flag to do bootstrapping
+                  nB_=1000               #--number of bootstrap repetitions/year
+                  ){
   require(ggplot2);
   require(rlang);
   require(tables);
@@ -15,15 +18,14 @@ doStep5<-function(){
   lst1 = wtsUtilities::getObj("rda_Step1_SBS_RawData.RData");
 
   #--define size bins----
-  cutpts = seq(from=24.5,to=184.5,by=5);
+  cutpts = seq(from=24.5,to=210.5,by=5);
   zBs    = wtsUtilities::calcMidpoints(cutpts);
+  bySex  = FALSE;
   out = c(out,list(cutpts=cutpts,zBs=zBs));
   
   #--do resampling, if necessary----
-  doBootstraps = FALSE;
-  if (doBootstraps){
-    doBootstraps<-function(){
-      nB = 1000; #--number of bootstrap repetitions/year
+  if (doBootstrapping){
+    doBootstraps<-function(nB=nB_){
       lstZCs = list();#--temporary list to accumulate bootsrapped ZCs
       #--calculate "observed" size comps (bootrep=0)
       bootrep=0;
@@ -32,7 +34,7 @@ doStep5<-function(){
                            tbl_hauls=lst1$dfrHD_BSFRF_SBS |> dplyr::mutate(STRATUM="SBS"),
                            tbl_indivs=lst1$dfrID_BSFRF_SBS |> dplyr::mutate(STRATUM="SBS"),
                            useStratumArea=FALSE, #--use sum of STATION_AREAs
-                           bySex=TRUE,
+                           bySex=bySex,
                            byMaturity=FALSE,
                            byShellCondition=FALSE,
                            cutpts=cutpts,
@@ -47,7 +49,7 @@ doStep5<-function(){
                            tbl_hauls=lst1$dfrHD_NMFS_SBS |> dplyr::mutate(STRATUM="SBS"),
                            tbl_indivs=lst1$dfrID_NMFS_SBS |> dplyr::mutate(STRATUM="SBS"),
                            useStratumArea=FALSE, #--use sum of STATION_AREAs
-                           bySex=TRUE,
+                           bySex=bySex,
                            byMaturity=FALSE,
                            byShellCondition=FALSE,
                            cutpts=cutpts,
@@ -115,7 +117,7 @@ doStep5<-function(){
                                  tbl_hauls=dfrHDBp,
                                  tbl_indivs=dfrIDBp,
                                  useStratumArea=FALSE, #--use sum of STATION_AREAs
-                                 bySex=TRUE,
+                                 bySex=bySex,
                                  byMaturity=FALSE,
                                  byShellCondition=FALSE,
                                  cutpts=cutpts,
@@ -130,7 +132,7 @@ doStep5<-function(){
                                  tbl_hauls=dfrHDNp,
                                  tbl_indivs=dfrIDNp,
                                  useStratumArea=FALSE, #--use sum of STATION_AREAs
-                                 bySex=TRUE,
+                                 bySex=bySex,
                                  byMaturity=FALSE,
                                  byShellCondition=FALSE,
                                  cutpts=cutpts,
@@ -158,69 +160,35 @@ doStep5<-function(){
                                    m=tolower(m),
                                    s=tolower(s),
                                    z=z+3.0,      #--shift to middle of size bin
-                                   abd=1000*abd);#--now in 1,000's of crab
-      wtsUtilities::saveObj(dfrBootZCs,"rda_Step5_BootZCs.RData");
+                                   abd=1000*abd/area);#--now in 1,000's of crab/sq. nmi.
       return(dfrBootZCs)
-    }
+    }#--end of doBootstraps
     dfrBootZCs = doBootstraps();
+    wtsUtilities::saveObj(dfrBootZCs,"rda_Step5_BootZCs.RData");
   } else {
     dfrBootZCs = wtsUtilities::getObj("rda_Step5_BootZCs.RData");
   }
-  dfrBootZCs = dfrBootZCs |> dplyr::mutate(abd=abd/area); #--NOW in 1,000's/sq. nmi. [move into above!!]
-  
+
   nB = max(dfrBootZCs$bootrep);
   out = c(out,list(dfrBootZCs=dfrBootZCs,nB=nB));
 
-  #--do figures for boostrapped ZCs----
-  #| label: fig-BootZCs-BSFRF
-  cap = paste0('"Observed" (thick line, dots) and bootstrapped (thin lines) size compositions from the BSFRF gear. ',
+  #| label: fig-BootZCs
+  cap = paste0('"Observed" (thick line, dots) and bootstrapped (thin lines) size compositions. ',
                "Bootstrapping consisted of hierarchical resampling of paired hauls and measured crab within hauls ",
                nB," times, with size compositions for both gear types calculated each time.");
-  p = plotBZCs(dfr=dfrBootZCs,gear_types="BSFRF",sexs=c("female","male"),factor=x);
-  out = c(out,list(`fig-BootZCs-BSFRF`=list(p=p,cap=cap)));
-  
-  #| label: fig-BootZCs-NMFS
-  cap = paste0('"Observed" (thick line, dots) and bootstrapped (thin lines) size compositions from the NMFS gear. ',
-               "Bootstrapping consisted of hierarchical resampling of paired hauls and measured crab within hauls ",
-               nB," times, with size compositions for both gear types calculated each time.");
-  p = plotBZCs(dfr=dfrBootZCs,gear_types="NMFS",sexs=c("female","male"),factor=x);
-  out = c(out,list(`fig-BootZCs-NMFS`=list(p=p,cap=cap)));
-  
-  #| label: fig-BootZCs-Ms
-  cap = paste0('"Observed" (thick line, dots) and bootstrapped (thin lines) size compositions for males. ',
-               "Bootstrapping consisted of hierarchical resampling of paired hauls and measured crab within hauls ",
-               nB," times, with size compositions for both gear types calculated each time.");
-  p = plotBZCs(dfr=dfrBootZCs,gear_types=c("BSFRF","NMFS"),sexs=c("male"),factor=gear);
-  out = c(out,list(`fig-BootZCs-Ms`=list(p=p,cap=cap)));
-  
-  #| label: fig-BootZCs-Fs
-  cap = paste0('"Observed" (thick line, dots) and bootstrapped (thin lines) size compositions for females. ',
-               "Bootstrapping consisted of hierarchical resampling of paired hauls and measured crab within hauls ",
-               nB," times, with size compositions for both gear types calculated each time.");
-  p = plotBZCs(dfr=dfrBootZCs,gear_types=c("BSFRF","NMFS"),sexs=c("female"),factor=gear,xlims=c(25,130));
-  out = c(out,list(`fig-BootZCs-Fs`=list(p=p,cap=cap)));
+  p = plotBZCs(dfr=dfrBootZCs,gear_types=c("BSFRF","NMFS"),sexs=c("all"),factor=gear,xlims=c(25,215));
+  out = c(out,list(`fig-BootZCs`=list(p=p,cap=cap)));
   
   #--do tables----
-  #--tbl.SurveyLevelZCsMales}
-  cap = "Survey-level size compositions (1,000s/sq. nmi.) for males from the SBS studies, by 5-mm size bin and gear type."
+  #--tbl.SurveyLevelZCs
+  cap = "Survey-level size compositions (1,000s/sq. nmi.) from the SBS studies, by 5-mm size bin and gear type."
   tblr = tabular(Factor(z,name="size")~Factor(y)*Factor(gear)*abd*sum,
-                 data=dfrBootZCs |> dplyr::filter(x=="male",bootrep==0));
+                 data=dfrBootZCs |> dplyr::filter(x=="all",bootrep==0));
   colLabels(tblr) = colLabels(tblr)[c(2,4),];
-  kbl = tblr |> wtsQMD::convert_tblr_to_kbl(c(1,1+c(2,4,6,8,10,12)),
+  kbl = tblr |> wtsQMD::convert_tblr_to_kbl(1:ncol(colLabels(tblr)),
                                             isPDF=wtsQMD::isOutputPDF());
   #print(kbl);
-  out = c(out,list(tblrSurveyLevelZCsMales=tblr));
-  rm(cap,tblr,kbl);
-
-  #--tbl.SurveyLevelZCsFemales}
-  cap = "Survey-level size compositions (1,000s/sq. nmi.) for females from the SBS studies, by 5-mm size bin and gear type."
-  tblr = tabular(Factor(z,name="size")~Factor(y)*Factor(gear)*abd*sum,,
-                 data=dfrBootZCs |> dplyr::filter(x=="female",bootrep==0));
-  colLabels(tblr) = colLabels(tblr)[c(2,4),];
-  kbl = tblr |> wtsQMD::convert_tblr_to_kbl(c(1,1+c(2,4,6,8,10,12)),
-                                            isPDF=wtsQMD::isOutputPDF());
-  #print(kbl);
-  out = c(out,list(tblrSurveyLevelZCsFemales=tblr));
+  out = c(out,list(tblrSurveyLevelZCs=tblr));
   rm(cap,tblr,kbl);
 
   #--compute statistics for bootstrapped size comps----
@@ -235,35 +203,20 @@ doStep5<-function(){
                    dplyr::ungroup();
 
   #--do plots for bootstrap statistics----
-  #| label: fig-StatsBootZCs-Ms
-  cap = paste0('"Observed" (black line, dots) and bootstrapped median (lines) and 90 percent confidence intervals by gear type for male size compositions. ',
+  #| label: fig-StatsBootZCs
+  cap = paste0('"Observed" (black line, dots) and bootstrapped median (lines) and 90 percent confidence intervals by gear type for size compositions. ',
                "Bootstrapping consisted of hierarchical resampling of paired hauls and measured crab within hauls ",
                nB," times by study year, with size compositions for both gear types calculated each time.");
   p = plotStatsBZCs(dfrBootZCs |> dplyr::filter(bootrep==0),
-                    dfrStatsBZCs,gear_types=c("BSFRF","NMFS"),sexs=c("male"),factor=gear);
-  out = c(out,list(`fig-StatsBootZCs-Ms`=list(p=p,cap=cap)));
+                    dfrStatsBZCs,gear_types=c("BSFRF","NMFS"),sexs=c("all"),factor=gear,xlims=c(25,215));
+  out = c(out,list(`fig-StatsBootZCs`=list(p=p,cap=cap)));
   
-  #| label: fig-StatsBootZCs-Fs
-  cap = paste0('"Observed" (black line, dots) and bootstrapped median (lines) and 90 percent confidence intervals by gear type for female size compositions. ',
+  #| label: fig-CVsBootZCss
+  cap = paste0('CVs from bootstrapped size compositions. ',
                "Bootstrapping consisted of hierarchical resampling of paired hauls and measured crab within hauls ",
                nB," times by study year, with size compositions for both gear types calculated each time.");
-  p = plotStatsBZCs(dfrBootZCs |> dplyr::filter(bootrep==0),
-                    dfrStatsBZCs,gear_types=c("BSFRF","NMFS"),sexs=c("female"),factor=gear,xlims=c(25,135));
-  out = c(out,list(`fig-StatsBootZCs-Fs`=list(p=p,cap=cap)));
-  
-  #| label: fig-CVsBootZCs-Ms
-  cap = paste0('CVs from bootstrapped male size compositions. ',
-               "Bootstrapping consisted of hierarchical resampling of paired hauls and measured crab within hauls ",
-               nB," times by study year, with size compositions for both gear types calculated each time.");
-  p = plotCVsCPUE(dfrStatsBZCs |> dplyr::filter(x=="male"),mn,sd,factor_=gear,ylab="Size Composition CVs",xlims=c(25,185));
-  out = c(out,list(`fig-CVsBootZCs-Ms`=list(p=p,cap=cap)));
-  
-  #| label: fig-CVsBootZCs-Fs
-  cap = paste0('CVs from bootstrapped female size compositions. ',
-               "Bootstrapping consisted of hierarchical resampling of paired hauls and measured crab within hauls ",
-               nB," times by study year, with size compositions for both gear types calculated each time.");
-  p = plotCVsCPUE(dfrStatsBZCs |> dplyr::filter(x=="female"),mn,sd,factor_=gear,ylab="Size Composition CVs",xlims=c(25,135));
-  out = c(out,list(`fig-CVsBootZCs-Fs`=list(p=p,cap=cap)));
+  p = plotCVsCPUE(dfrStatsBZCs |> dplyr::filter(x=="all"),mn,sd,factor_=gear,ylab="Size Composition CVs",xlims=c(25,215));
+  out = c(out,list(`fig-CVsBootZCs`=list(p=p,cap=cap)));
   
   wtsUtilities::saveObj(out,"rda_Step5_BootZCs_AllResults.RData");
   return(out);

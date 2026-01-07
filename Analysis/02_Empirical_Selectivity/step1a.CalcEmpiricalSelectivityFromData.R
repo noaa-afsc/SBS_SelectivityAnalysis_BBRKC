@@ -1,4 +1,5 @@
 #--calculate empirical selectivity from data
+#----for BBRKC, sex is undetermined in McConnaughey dataset
 dirPrj = rstudioapi::getActiveProject();
 dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
 #--define output filename
@@ -8,13 +9,13 @@ require(tcsamSurveyData);
 source(file.path(dirThs,"r_CalcEmpiricalSelectivity.R"));
 source(file.path(dirThs,"r_ExtractHaulsAndIndivs.R"));
 
-dfn = file.path(dirPrj,"Analysis/00a_SBS_Data/rda_Step1_SBS_RawData.RData");#--SBS data list object
+dfn = file.path(dirPrj,"Analysis/01_SBS_Data/rda_Step1_SBS_RawData.RData");#--SBS data list object
 lst = wtsUtilities::getObj(dfn);
 #--set up processing parameters
-aggBySex           =FALSE;
+aggBySex           =TRUE;
 aggByMaturity      =TRUE;
 aggByShellCondition=TRUE;
-cutpts             =seq(from=25,to=185,by=5);
+cutpts             =seq(from=50,to=180,by=5);
 truncate.low       =TRUE;
 truncate.high      =FALSE;
 verbosity          =0;

@@ -3,11 +3,11 @@
 #--function to calculate CPUE by SBS haul/sex/size class
 ##--lst is the list object from Step1
 calcCPUEs<-function(lst,
-                    bySex=TRUE,
+                    bySex=FALSE,
                     byMaturity=FALSE,
                     byShellCondition=FALSE,
                     bySize=TRUE,
-                    cutpts=seq(from=0,to=185,by=5),
+                    cutpts=seq(from=0,to=200,by=5),
                     truncate.low=TRUE,
                     truncate.high=FALSE,
                     verbosity=0){
@@ -61,7 +61,7 @@ calcCPUEs<-function(lst,
 #--function to calculate expanded abundance size comps by SBS haul/sex/size class
 ##--lst is the list object from Step1
 calcTotalSizeComps<-function(lst,
-                              aggBySex=FALSE,
+                              aggBySex=TRUE,
                               aggByMaturity=TRUE,
                               aggByShellCondition=TRUE,
                               cutpts=seq(from=25,to=185,by=5),
