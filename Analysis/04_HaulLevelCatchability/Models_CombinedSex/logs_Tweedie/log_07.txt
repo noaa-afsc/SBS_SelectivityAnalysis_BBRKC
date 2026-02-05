@@ -1,0 +1,1027 @@
+Started evalAllModels at 2026-01-08 09:38:20.488547
+
+
+Evaluating model 1: s(z)
+
+
+Evaluating model 2: s(z) + ti(z,s)
+
+
+Evaluating model 9: s(z) + ti(z,d)
+
+
+Evaluating model 8: s(z) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 6: s(z) + ti(z,t) + ti(z,s)
+
+
+Evaluating model 11: s(z) + ti(z,d) + ti(z,f)
+
+
+Evaluating model 10: s(z) + ti(z,d) + ti(z,s)
+
+
+Evaluating model 4: s(z) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 7: s(z) + ti(z,t) + ti(z,f)
+
+
+Evaluating model 5: s(z) + ti(z,t)
+
+
+Evaluating model 3: s(z) + ti(z,f)
+1, obsR ~ s(z, bs = "ts", k = c(10)), 0.02654537, 970.164, 0.0288627, TRUE, TRUE, TRUE, 
+
+
+Evaluating model 12: s(z) + ti(z,d) + ti(z,f) + ti(z,s)
+5, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.05522806, 969.3106, 0.01010313, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 13: s(z) + ti(z,d) + ti(z,t)
+9, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.0297019, 970.8263, 0.07085774, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 14: s(z) + ti(z,d) + ti(z,t) + ti(z,s)
+3, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02959484, 972.2114, 0.04114275, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 15: s(z) + ti(z,d) + ti(z,t) + ti(z,f)
+2, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02654524, 970.1649, 0.0288636, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 16: s(z) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+10, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02970164, 970.827, 0.07086033, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 17: s(z) + ti(s)
+17, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.03061613, 967.9716, 0.008683646, TRUE, TRUE, TRUE, 
+
+
+Evaluating model 18: s(z) + ti(s) + ti(z,s)
+6, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05522801, 969.3108, 0.01010324, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 19: s(z) + ti(s) + ti(z,f)
+7, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.05988111, 970.7851, 0.01581776, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 20: s(z) + ti(s) + ti(z,f) + ti(z,s)
+11, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.03180672, 972.4956, 0.07512794, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 21: s(z) + ti(s) + ti(z,t)
+4, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02959479, 972.2116, 0.0411431, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 22: s(z) + ti(s) + ti(z,t) + ti(z,s)
+21, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.05579458, 966.9936, 0.005673902, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 23: s(z) + ti(s) + ti(z,t) + ti(z,f)
+13, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.05934798, 967.0391, 0.01975359, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 24: s(z) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+19, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.03377915, 969.4776, 0.001250259, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 25: s(z) + ti(s) + ti(z,d)
+25, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.0402726, 965.5465, 0.0009448709, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 26: s(z) + ti(s) + ti(z,d) + ti(z,s)
+18, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.03264403, 967.6335, 0.001666576, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 27: s(z) + ti(s) + ti(z,d) + ti(z,f)
+22, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05579346, 966.995, 0.005673862, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 28: s(z) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+15, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0630142, 968.3455, 0.0316423, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 29: s(z) + ti(s) + ti(z,d) + ti(z,t)
+23, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.06757322, 960.5326, 0.004542016, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 30: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+12, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.03180464, 972.4993, 0.07514675, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 31: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+8, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.06960755, 961.5546, 0.006835959, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 32: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+27, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.04230575, 966.8756, 0.004924191, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 33: s(z) + ti(f)
+33, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)), 0.07999297, 948.1951, 0.06510764, TRUE, TRUE, TRUE, 
+
+
+Evaluating model 34: s(z) + ti(f) + ti(z,s)
+14, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05934747, 967.04, 0.01975624, TRUE, FALSE, FALSE, 
+26, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.04027047, 965.5496, 0.0009448714, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 36: s(z) + ti(f) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 35: s(z) + ti(f) + ti(z,f)
+29, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.04606956, 956.3106, 0.002114288, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 37: s(z) + ti(f) + ti(z,t)
+34, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.07999175, 948.2012, 0.06510596, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 38: s(z) + ti(f) + ti(z,t) + ti(z,s)
+37, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1099946, 943.3464, 0.0523887, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 39: s(z) + ti(f) + ti(z,t) + ti(z,f)
+16, obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.06301291, 968.3479, 0.03164694, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 40: s(z) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+35, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.08633942, 950.7852, 0.04836453, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 41: s(z) + ti(f) + ti(z,d)
+38, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.109992, 943.3512, 0.05239316, TRUE, FALSE, FALSE, 
+41, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.08498968, 945.9575, 0.02888171, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 42: s(z) + ti(f) + ti(z,d) + ti(z,s)
+
+
+Evaluating model 43: s(z) + ti(f) + ti(z,d) + ti(z,f)
+39, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1100019, 943.3895, 0.05241697, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 44: s(z) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+20, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.04117099, 962.2562, 0.0002684993, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 45: s(z) + ti(f) + ti(z,d) + ti(z,t)
+36, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.08633853, 950.7858, 0.04836629, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 46: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+31, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.05998459, 953.3313, 0.02594122, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 47: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+24, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.06758482, 960.5319, 0.004549025, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 48: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+45, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1109104, 941.7334, 0.0701432, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 49: s(z) + ti(f) + ti(s)
+42, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.08498876, 945.9597, 0.02887934, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 50: s(z) + ti(f) + ti(s) + ti(z,s)
+43, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.09053129, 947.439, 0.01927539, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 51: s(z) + ti(f) + ti(s) + ti(z,f)
+49, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.08034433, 949.6873, 0.0408295, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 52: s(z) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+30, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.04606813, 956.3119, 0.002114974, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 53: s(z) + ti(f) + ti(s) + ti(z,t)
+50, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.08034343, 949.6886, 0.04082933, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 54: s(z) + ti(f) + ti(s) + ti(z,t) + ti(z,s)
+51, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.08789827, 951.4175, 0.02838204, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 55: s(z) + ti(f) + ti(s) + ti(z,t) + ti(z,f)
+53, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1088354, 946.2912, 0.03977406, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 56: s(z) + ti(f) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+46, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1109102, 941.7339, 0.07014208, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 57: s(z) + ti(f) + ti(s) + ti(z,d)
+57, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.09097452, 943.2837, 0.0003087078, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 58: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,s)
+47, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1282713, 938.4047, 0.03242402, TRUE, TRUE, FALSE, 
+44, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.08498895, 945.9593, 0.02887994, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 59: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,f)
+
+
+Evaluating model 60: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+32, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05966288, 951.7534, 0.006705797, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 61: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+55, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1139386, 947.9268, 0.0382077, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 62: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+54, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1088347, 946.2922, 0.03977389, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 63: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+52, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.08789806, 951.4181, 0.02838166, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 64: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+40, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1262697, 940.5379, 0.06326116, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 65: s(z) + ti(t)
+65, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)), 0.1100599, 949.1617, 0.008230265, TRUE, TRUE, TRUE, 
+
+
+Evaluating model 66: s(z) + ti(t) + ti(z,s)
+58, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.090973, 943.2859, 0.0003085658, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 67: s(z) + ti(t) + ti(z,f)
+61, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1063408, 937.9419, 0.01048013, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 68: s(z) + ti(t) + ti(z,f) + ti(z,s)
+67, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1131015, 951.382, 0.01078813, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 69: s(z) + ti(t) + ti(z,t)
+69, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1479155, 944.2115, 0.0114275, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 70: s(z) + ti(t) + ti(z,t) + ti(z,s)
+59, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.09846738, 944.657, 7.173266e-05, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 71: s(z) + ti(t) + ti(z,t) + ti(z,f)
+66, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1063015, 940.35, 0.01855936, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 72: s(z) + ti(t) + ti(z,t) + ti(z,f) + ti(z,s)
+28, obsR ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.04434016, 965.5298, 0.01543615, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 73: s(z) + ti(t) + ti(z,d)
+48, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1282729, 938.4019, 0.03220768, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 74: s(z) + ti(t) + ti(z,d) + ti(z,s)
+60, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.09846687, 944.6583, 7.167259e-05, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 75: s(z) + ti(t) + ti(z,d) + ti(z,f)
+62, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1063397, 937.9438, 0.01048283, TRUE, FALSE, FALSE, 
+71, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1507221, 946.2662, 0.01259959, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 76: s(z) + ti(t) + ti(z,d) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 77: s(z) + ti(t) + ti(z,d) + ti(z,t)
+68, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1100592, 949.1695, 0.008235068, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 78: s(z) + ti(t) + ti(z,d) + ti(z,t) + ti(z,s)
+56, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1139373, 947.927, 0.03820953, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 79: s(z) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f)
+63, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1113872, 938.9573, 0.008736034, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 80: s(z) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+73, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1055886, 950.6999, 0.007547747, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 81: s(z) + ti(t) + ti(s)
+77, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1406751, 945.9135, 0.007453687, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 82: s(z) + ti(t) + ti(s) + ti(z,s)
+70, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1445849, 936.1809, 0.02155123, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 83: s(z) + ti(t) + ti(s) + ti(z,f)
+81, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.1236795, 945.8506, 0.001737338, TRUE, TRUE, TRUE, 
+
+
+Evaluating model 84: s(z) + ti(t) + ti(s) + ti(z,f) + ti(z,s)
+83, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1273397, 947.6042, 0.001056252, TRUE, FALSE, FALSE, 
+72, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1659228, 933.0976, 0.02039526, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 85: s(z) + ti(t) + ti(s) + ti(z,t)
+
+
+Evaluating model 86: s(z) + ti(t) + ti(s) + ti(z,t) + ti(z,s)
+85, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1497872, 942.1315, 0.00795878, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 87: s(z) + ti(t) + ti(s) + ti(z,t) + ti(z,f)
+75, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1068652, 953.4124, 0.01165678, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 88: s(z) + ti(t) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+82, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1262576, 935.5632, 0.0001696249, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 89: s(z) + ti(t) + ti(s) + ti(z,d)
+79, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1642329, 933.926, 0.01832584, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 90: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,s)
+89, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1159234, 947.9477, 0.003439437, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 91: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,f)
+87, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1534779, 943.9094, 0.007467559, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 92: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+74, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1054972, 951.2453, 0.008094626, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 93: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,t)
+90, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1159341, 947.9481, 0.003433189, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 94: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+86, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1653457, 931.4971, 0.0001748843, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 95: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+78, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1463329, 936.4358, 0.02437795, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 96: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+91, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1180725, 950.0272, 0.001986675, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 97: s(z) + ti(t) + ti(f)
+64, obsR ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.111387, 938.9576, 0.008736301, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 98: s(z) + ti(t) + ti(f) + ti(z,s)
+97, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)), 0.182823, 923.3267, 0.02253698, TRUE, TRUE, TRUE, 
+84, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1371634, 931.3559, 0.001253628, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 99: s(z) + ti(t) + ti(f) + ti(z,f)
+
+
+Evaluating model 100: s(z) + ti(t) + ti(f) + ti(z,f) + ti(z,s)
+98, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1828221, 923.3288, 0.02253545, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 101: s(z) + ti(t) + ti(f) + ti(z,t)
+93, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1154929, 939.3911, 0.009258532, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 102: s(z) + ti(t) + ti(f) + ti(z,t) + ti(z,s)
+101, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.2160583, 916.4874, 0.04427342, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 103: s(z) + ti(t) + ti(f) + ti(z,t) + ti(z,f)
+99, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1876403, 925.0795, 0.02194614, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 104: s(z) + ti(t) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+103, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.216058, 916.4904, 0.04427381, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 105: s(z) + ti(t) + ti(f) + ti(z,d)
+105, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1674462, 921.4318, 0.02736103, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 106: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,s)
+88, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1796269, 926.9013, 0.0004799699, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 107: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,f)
+102, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2028498, 914.5324, 0.0343561, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 108: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+80, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1660511, 928.8536, 0.02276991, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 109: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,t)
+106, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1549113, 917.348, 0.01073186, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 110: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+107, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1762838, 923.1482, 0.0235104, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 111: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+76, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1145689, 933.8044, 0.02252239, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 112: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+109, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.2101286, 915.2274, 0.05544415, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 113: s(z) + ti(t) + ti(f) + ti(s)
+113, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.1941213, 921.4361, 0.01270451, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 114: s(z) + ti(t) + ti(f) + ti(s) + ti(z,s)
+108, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.164649, 918.9619, 0.008355592, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 115: s(z) + ti(t) + ti(f) + ti(s) + ti(z,f)
+104, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.20285, 914.5327, 0.03435553, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 116: s(z) + ti(t) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+100, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1797958, 922.7727, 0.01264362, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 117: s(z) + ti(t) + ti(f) + ti(s) + ti(z,t)
+117, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.2283297, 915.0652, 0.02692919, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 118: s(z) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,s)
+114, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.194121, 921.4381, 0.01270422, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 119: s(z) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,f)
+96, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1670817, 934.8681, 0.001238743, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 120: s(z) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+111, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2129312, 916.5741, 0.05335353, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 121: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d)
+115, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2026801, 923.5316, 0.01187137, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 122: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,s)
+121, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1886282, 919.0927, 0.0101088, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 123: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,f)
+110, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.207119, 913.9332, 0.03693142, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 124: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+116, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2026791, 923.5337, 0.01187105, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 125: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+94, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1309528, 933.9895, 0.002222014, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 126: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+122, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1886274, 919.094, 0.01011015, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 127: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+118, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2283285, 915.0686, 0.02692926, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 128: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+125, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1981009, 913.2223, 0.01319493, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 129: s(z) + ti(d)
+123, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1987911, 920.6473, 0.009208984, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 130: s(z) + ti(d) + ti(z,s)
+129, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)), 0.04461189, 966.5855, 0.2592481, TRUE, TRUE, TRUE, 
+
+
+Evaluating model 131: s(z) + ti(d) + ti(z,f)
+119, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2335383, 917.3994, 0.02699186, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 132: s(z) + ti(d) + ti(z,f) + ti(z,s)
+92, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1233724, 939.892, 0.0001427756, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 133: s(z) + ti(d) + ti(z,t)
+133, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.070021, 963.3315, 0.1597508, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 134: s(z) + ti(d) + ti(z,t) + ti(z,s)
+130, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.04460959, 966.59, 0.2592801, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 135: s(z) + ti(d) + ti(z,t) + ti(z,f)
+131, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.04611247, 967.9672, 0.2486403, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 136: s(z) + ti(d) + ti(z,t) + ti(z,f) + ti(z,s)
+134, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.07001851, 963.3414, 0.1597584, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 137: s(z) + ti(d) + ti(z,d)
+137, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.04461146, 966.5873, 0.2592624, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 138: s(z) + ti(d) + ti(z,d) + ti(z,s)
+132, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.04461066, 966.5878, 0.2592588, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 139: s(z) + ti(d) + ti(z,d) + ti(z,f)
+124, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1987875, 920.6467, 0.009209827, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 140: s(z) + ti(d) + ti(z,d) + ti(z,f) + ti(z,s)
+95, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1154879, 939.3927, 0.009263773, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 141: s(z) + ti(d) + ti(z,d) + ti(z,t)
+112, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2184606, 908.4515, 0.01877958, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 142: s(z) + ti(d) + ti(z,d) + ti(z,t) + ti(z,s)
+135, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.07407135, 956.3787, 0.1369649, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 143: s(z) + ti(d) + ti(z,d) + ti(z,t) + ti(z,f)
+126, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1991814, 906.1858, 0.003775367, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 144: s(z) + ti(d) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+138, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.04461074, 966.5882, 0.2592654, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 145: s(z) + ti(d) + ti(s)
+145, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.0533733, 963.0873, 0.04064837, TRUE, TRUE, TRUE, 
+
+
+Evaluating model 146: s(z) + ti(d) + ti(s) + ti(z,s)
+136, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.07407101, 956.3794, 0.1369662, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 147: s(z) + ti(d) + ti(s) + ti(z,f)
+141, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.07026267, 963.9798, 0.1457215, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 148: s(z) + ti(d) + ti(s) + ti(z,f) + ti(z,s)
+127, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2068007, 914.9007, 0.01101419, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 149: s(z) + ti(d) + ti(s) + ti(z,t)
+146, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05337205, 963.0889, 0.0406453, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 150: s(z) + ti(d) + ti(s) + ti(z,t) + ti(z,s)
+149, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.07595103, 959.8203, 0.02900064, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 151: s(z) + ti(d) + ti(s) + ti(z,t) + ti(z,f)
+147, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0533771, 963.0905, 0.04067595, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 152: s(z) + ti(d) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+128, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2091266, 908.0435, 0.002556118, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 153: s(z) + ti(d) + ti(s) + ti(z,d)
+153, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.05337091, 963.092, 0.04065403, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 154: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,s)
+120, obsR ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2197829, 912.6873, 0.01637904, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 155: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,f)
+148, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05485403, 964.3197, 0.04807792, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 156: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+139, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0453346, 968.9964, 0.2415929, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 157: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,t)
+143, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.07448859, 956.6342, 0.1320627, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 158: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+150, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.07594864, 959.8238, 0.02900981, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 159: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+151, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.07715888, 952.8512, 0.04512593, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 160: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+155, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.05485468, 964.3195, 0.04808059, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 161: s(z) + ti(d) + ti(f)
+161, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)), 0.103738, 946.2646, 0.00224823, TRUE, TRUE, TRUE, 
+
+
+Evaluating model 162: s(z) + ti(d) + ti(f) + ti(z,s)
+154, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05337164, 963.0904, 0.04064951, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 163: s(z) + ti(d) + ti(f) + ti(z,f)
+157, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.07601313, 960.2577, 0.02198283, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 164: s(z) + ti(d) + ti(f) + ti(z,f) + ti(z,s)
+140, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.04825555, 960.439, 0.2079117, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 165: s(z) + ti(d) + ti(f) + ti(z,t)
+165, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1334284, 939.7713, 0.0008720804, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 166: s(z) + ti(d) + ti(f) + ti(z,t) + ti(z,s)
+162, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.103335, 946.6188, 0.0008103954, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 167: s(z) + ti(d) + ti(f) + ti(z,t) + ti(z,f)
+163, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1077417, 947.8525, 0.001805467, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 168: s(z) + ti(d) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+159, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.07773629, 961.5106, 0.0238703, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 169: s(z) + ti(d) + ti(f) + ti(z,d)
+166, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1334272, 939.787, 0.000869282, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 170: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,s)
+169, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.09694926, 945.501, 0.00267393, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 171: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,f)
+167, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1334286, 939.7765, 0.0008716519, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 172: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+158, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05477169, 955.7354, 0.03467361, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 173: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,t)
+164, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1077424, 947.8535, 0.001804933, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 174: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+142, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.06955829, 961.6008, 0.1807598, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 175: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+170, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.09694799, 945.5038, 0.002672376, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 176: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+171, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1014879, 947.0012, 0.001700876, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 177: s(z) + ti(d) + ti(f) + ti(s)
+177, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.1112796, 945.718, 0.003884687, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 178: s(z) + ti(d) + ti(f) + ti(s) + ti(z,s)
+173, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1299327, 939.7425, 0.006471622, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 179: s(z) + ti(d) + ti(f) + ti(s) + ti(z,f)
+168, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1334286, 939.7746, 0.0008711316, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 180: s(z) + ti(d) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+152, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.07715869, 952.8516, 0.04512651, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 181: s(z) + ti(d) + ti(f) + ti(s) + ti(z,t)
+172, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.0969481, 945.5037, 0.002672431, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 182: s(z) + ti(d) + ti(f) + ti(s) + ti(z,t) + ti(z,s)
+179, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1112783, 945.7197, 0.003885917, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 183: s(z) + ti(d) + ti(f) + ti(s) + ti(z,t) + ti(z,f)
+178, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.111279, 945.7189, 0.003884877, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 184: s(z) + ti(d) + ti(f) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+181, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.138607, 940.7212, 0.002724586, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 185: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d)
+185, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1059307, 941.6809, 0.01221974, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 186: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,s)
+144, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.07985742, 955.85, 0.1554055, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 187: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,f)
+175, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1299322, 939.7443, 0.006471815, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 188: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+182, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1386063, 940.7225, 0.002724864, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 189: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+174, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1299326, 939.7454, 0.006469142, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 190: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+183, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1386058, 940.7229, 0.002724941, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 191: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+186, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1063787, 943.6732, 0.005580366, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 192: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+180, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1171584, 947.362, 0.003595072, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 193: s(z) + ti(d) + ti(t)
+193, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)), 0.110059, 949.1628, 0.008230005, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 194: s(z) + ti(d) + ti(t) + ti(z,s)
+189, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.136099, 938.4191, 4.084403e-05, TRUE, TRUE, FALSE, 
+
+
+Evaluating model 195: s(z) + ti(d) + ti(t) + ti(z,f)
+187, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1124384, 943.1035, 0.01096014, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 196: s(z) + ti(d) + ti(t) + ti(z,f) + ti(z,s)
+195, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1130965, 951.3784, 0.0107817, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 197: s(z) + ti(d) + ti(t) + ti(z,t)
+194, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1099144, 949.6777, 0.008730193, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 198: s(z) + ti(d) + ti(t) + ti(z,t) + ti(z,s)
+197, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1479148, 944.213, 0.01142852, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 199: s(z) + ti(d) + ti(t) + ti(z,t) + ti(z,f)
+156, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.05614202, 962.067, 0.1131038, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 200: s(z) + ti(d) + ti(t) + ti(z,t) + ti(z,f) + ti(z,s)
+191, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1371555, 940.0098, 0.0001047583, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 201: s(z) + ti(d) + ti(t) + ti(z,d)
+160, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.07746869, 953.104, 0.04209296, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 202: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,s)
+176, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1299325, 939.7443, 0.006470377, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 203: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,f)
+201, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1100594, 949.1625, 0.008230318, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 204: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,f) + ti(z,s)
+190, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1360982, 938.4215, 4.086916e-05, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 205: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,t)
+198, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1477782, 945.442, 0.01384347, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 206: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,t) + ti(z,s)
+196, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1063007, 940.3505, 0.01855905, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 207: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f)
+184, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1416967, 942.3259, 0.001515069, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 208: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+199, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.150722, 946.2665, 0.01259975, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 209: s(z) + ti(d) + ti(t) + ti(s)
+209, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.1236779, 945.8527, 0.001737147, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 210: s(z) + ti(d) + ti(t) + ti(s) + ti(z,s)
+205, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1406723, 945.916, 0.007454079, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 211: s(z) + ti(d) + ti(t) + ti(s) + ti(z,f)
+203, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.106862, 953.4144, 0.0116569, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 212: s(z) + ti(d) + ti(t) + ti(s) + ti(z,f) + ti(z,s)
+192, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1386356, 939.9258, 3.354738e-05, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 213: s(z) + ti(d) + ti(t) + ti(s) + ti(z,t)
+202, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.09894282, 940.4276, 0.02084029, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 214: s(z) + ti(d) + ti(t) + ti(s) + ti(z,t) + ti(z,s)
+211, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1236781, 945.8522, 0.001737273, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 215: s(z) + ti(d) + ti(t) + ti(s) + ti(z,t) + ti(z,f)
+213, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1497251, 942.1475, 0.007981919, TRUE, FALSE, FALSE, 
+210, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1236778, 945.8527, 0.001737237, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 216: s(z) + ti(d) + ti(t) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 217: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d)
+188, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1133434, 942.1554, 0.03628005, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 218: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,s)
+207, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1395679, 948.2893, 0.009768169, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 219: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,f)
+217, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1159198, 947.9496, 0.00343947, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 220: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+200, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1700164, 928.3522, 0.02510931, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 221: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,t)
+206, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1217802, 940.6235, 0.02300539, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 222: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+212, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1273436, 947.6078, 0.001055164, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 223: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+218, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1159234, 947.9505, 0.003437837, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 224: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+204, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1011328, 941.4512, 0.02604311, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 225: s(z) + ti(d) + ti(t) + ti(f)
+225, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)), 0.1828218, 923.3277, 0.02253822, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 226: s(z) + ti(d) + ti(t) + ti(f) + ti(z,s)
+219, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1180631, 950.0299, 0.00198775, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 227: s(z) + ti(d) + ti(t) + ti(f) + ti(z,f)
+221, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1154925, 939.3915, 0.009258221, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 228: s(z) + ti(d) + ti(t) + ti(f) + ti(z,f) + ti(z,s)
+214, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1653454, 931.4976, 0.0001748366, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 229: s(z) + ti(d) + ti(t) + ti(f) + ti(z,t)
+226, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1732706, 921.0558, 0.01394524, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 230: s(z) + ti(d) + ti(t) + ti(f) + ti(z,t) + ti(z,s)
+227, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1876372, 925.0799, 0.02194806, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 231: s(z) + ti(d) + ti(t) + ti(f) + ti(z,t) + ti(z,f)
+229, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.2160564, 916.4927, 0.04427393, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 232: s(z) + ti(d) + ti(t) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+215, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1719723, 933.076, 0.0001769627, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 233: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d)
+233, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1674467, 921.4348, 0.02736824, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 234: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,s)
+208, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1660504, 928.8535, 0.02277013, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 235: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,f)
+216, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1719725, 933.0778, 0.0001768554, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 236: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+223, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1189377, 941.1374, 0.006811489, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 237: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,t)
+231, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2183899, 917.9812, 0.04500509, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 238: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+228, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1797946, 922.7729, 0.01264422, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 239: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+230, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2028497, 914.5326, 0.03435603, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 240: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+234, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1549101, 917.3483, 0.01073275, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 241: s(z) + ti(d) + ti(t) + ti(f) + ti(s)
+235, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.17628, 923.1486, 0.02351394, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 242: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,s)
+241, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.1431153, 938.9388, 0.02802405, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 243: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,f)
+237, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.2101265, 915.2288, 0.05544652, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 244: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+222, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1309502, 933.9976, 0.002222904, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 245: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,t)
+242, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1812205, 916.8131, 0.007191723, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 246: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,s)
+232, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2028498, 914.5329, 0.03435585, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 247: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,f)
+238, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2071155, 913.9354, 0.03693609, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 248: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+245, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.2283299, 915.0667, 0.02692688, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 249: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d)
+243, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2026801, 923.5317, 0.01187134, TRUE, FALSE, FALSE, 
+224, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1369502, 935.1946, 0.0006496396, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 250: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,s)
+
+
+Evaluating model 251: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,f)
+249, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.1886263, 919.0943, 0.01011076, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 252: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+239, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2129311, 916.5765, 0.05335436, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 253: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+246, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2128076, 910.2283, 0.01810233, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 254: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+236, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1646485, 918.9621, 0.008355794, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 255: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+247, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2283296, 915.0666, 0.02692847, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 256: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+220, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1180623, 950.0296, 0.001988126, TRUE, FALSE, FALSE, 
+251, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.1905496, 919.8995, 0.01304773, TRUE, FALSE, FALSE, 
+248, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2283296, 915.0676, 0.02692768, TRUE, FALSE, FALSE, 
+244, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1913521, 919.018, 0.005892796, TRUE, FALSE, FALSE, 
+250, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1767037, 918.3518, 0.01719836, TRUE, FALSE, FALSE, 
+253, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.1981011, 913.2226, 0.01319537, TRUE, FALSE, FALSE, 
+252, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1987871, 920.6474, 0.009209908, TRUE, FALSE, FALSE, 
+240, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.2184616, 908.4514, 0.01877676, TRUE, FALSE, FALSE, 
+254, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.1991813, 906.1859, 0.003775308, TRUE, FALSE, FALSE, 
+255, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.2067975, 914.901, 0.01101183, TRUE, FALSE, FALSE, 
+256, obsR ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.222205, 907.425, 0.005383911, TRUE, FALSE, FALSE, 
+Finished evalAllModels logging at 2026-01-08 09:39:58.132785
+Elapsed time was 1.6274039665858

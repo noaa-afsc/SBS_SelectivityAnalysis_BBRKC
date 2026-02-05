@@ -1,4 +1,4 @@
-#--fit various models for ln(r) using mgcv to fit GAMs for males using the BINOMIAL distribution----
+#--fit various models for proportions `p` using mgcv to fit GAMs using the BINOMIAL distribution----
 require(DHARMa);
 require(dplyr);
 require(ggplot2);
@@ -6,22 +6,22 @@ require(gratia)
 require(mgcv);
 
 #--get censored data and prediction grids----
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
-lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.Males.RData"));
+dirPrj = rstudioapi::getActiveProject();
+dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability/Models_CombinedSex")
+lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.RData"));
 
 #--remove zeros, infs, questionable observed Rs----
-#dfrDatp   = lst$dfrDat |> dplyr::filter(obsR<10, is.finite(lnR),between(z,15,150));
-dfrDatp   = lst$dfrDat |> dplyr::filter(between(z,15,150));
+dfrDatp   = lst$dfrDat |> dplyr::filter(between(z,50,190));
 
-#--BINOMIAL regression  models for lnR----
+#--BINOMIAL regression  models for proportions `p`----
 famB = stats::binomial(link="logit");
 #--------ALL Z 2-WAY INTERACTIONS--------------------------
-  #--ln(r) = ti(z) + 
+  #--p = s(z) + 
  #--         ti(d) + ti(t) + ti(f) + ti(s) +
   #--        ti(z,d) + ti(z,t) + ti(z,f) +ti(z,s)
-  ks=c(20,10);
+  ks=c(10,6);
   k1 = ks[1]; k2 = ks[2];
-  frmla  = p~ti(z,bs="ts",k=k1)   +
+  frmla  = p~s(z,bs="ts",k=k1)   +
              ti(d,bs="ts",k=k2)   + ti(t,bs="ts",k=k2)   + ti(f,bs="ts",k=k2)   + ti(s,bs="ts",k=k2) +
              ti(z,d,bs="ts",k=c(k1,k2)) + ti(z,t,bs="ts",k=c(k1,k2)) + ti(z,f,bs="ts",k=c(k1,k2)) + ti(z,s,bs="ts",k=c(k1,k2));
   mdlB_ZE2D  = mgcv::gam(frmla,family=famB,data=dfrDatp,select=TRUE,method="REML",fit=FALSE,
@@ -29,15 +29,16 @@ famB = stats::binomial(link="logit");
 
 #--run cross-validation using concurvity and other criteria to rank models
 if (FALSE){
+  #--run cross validation-------------------------------------------------
   source(file.path(dirThs,"../r_gam.prefit.functions.R"));
   source(file.path(dirThs,"../r_SelectModelByConcurvityFunctions.R"));
-#--run cross validation-------------------------------------------------
   set.seed(1111111);
   mdl = mdlB_ZE2D;
   dfrCrsVal = runCrossValidation(
                  mdl,
                  ks,
                  dfrData=dfrDatp,
+                 link="lgtp",
                  numFolds=10,
                  concrv_opt=2,
                  doParallel=TRUE,
@@ -102,14 +103,74 @@ if (FALSE){
   #--plot stats from models with better summary stats than the base model
   plotStats_BestModels(dfrCrsVald,dfrCrsValdp1);
   
-  best_idx = dfrCrsValdp1$i[2];#--index of best model in evaluated combinations
+  best_idx = dfrCrsValdp1$i[1];#--index of best model in evaluated combinations
   best_mdl = evalBestModel(mdl,ks,best_idx);
   #--diagnostic plots
   simResids <- DHARMa::simulateResiduals(fittedModel = best_mdl, plot = F, n=1000);
   DHARMa::plotQQunif(simResids);
   DHARMa::plotResiduals(simResids);
   plts = getModelPlots(best_mdl);
-  wtsUtilities::saveObj(dfrCrsValdp1,file.path(dirThs,"rda_Step3b1.BinomialModels_OrderedModels.RData"));
-  wtsUtilities::saveObj(best_mdl,    file.path(dirThs,"rda_Step3b1.BinomialModels_BestModel.RData"));
+  wtsUtilities::saveObj(dfrCrsValdp1,file.path(dirThs,"rda_Step3b2.BinomialModels_OrderedModels.RData"));
+  wtsUtilities::saveObj(best_mdl,    file.path(dirThs,"rda_Step3b3.BinomialModels_BestModel.RData"));
 }
 
+if (FALSE){
+  #----function to predict values based on a model
+  best_mdl = wtsUtilities::getObj(file.path(dirThs,"rda_Step3b3.BinomialModels_BestModel.RData"));
+  prdMod<-function(mdl,trms,lst,type="response",keep=NULL,p=0.05){
+    #--testing: mdl=mdl_bestRE; trms=c("all"); type="response"; lst=grdPrd; keep=NULL; p=0.05;
+    dfr = wtsMGCV::createGridTbl(lst);
+    if (any(trms=="all")){
+      #--add intercept and all smooth terms
+      trmsp = "(Intercept)";
+      trms = wtsMGCV::getSmoothTerms(mdl);
+      for (trm in trms) trmsp = c(trmsp,trm);
+      trms = trmsp;
+    }
+    prd = dplyr::bind_cols(
+              dfr,
+              tibble::as_tibble(
+                mgcv::predict.gam(mdl,dfr,type=type,terms=trms,se.fit=TRUE),
+              ) |> 
+              dplyr::mutate(type="fit",
+                            lci=qnorm(p,fit,se.fit,lower.tail=TRUE),
+                            uci=qnorm(p,fit,se.fit,lower.tail=FALSE),
+                            terms=paste(trms,collapse=" + "))
+          ) |> 
+            dplyr::rename(emp_sel=fit);
+    if (!is.null(keep)){
+      prd = prd |> 
+              dplyr::distinct(pick(tidyselect::any_of(keep),emp_sel,se.fit,lci,uci,terms));
+      drop = names(lst)[!(names(lst) %in% keep)];
+      for (drp in drop) prd[[drp]] = NA;
+    }
+    return(prd);
+  }
+  plotMod<-function(tmp,ylims=c(0,1.5)){
+    #--testing: tmp=dfrPrd; ylims=c(0,1.5);
+    if ((!any(names(tmp)=="y")) || all(is.na(tmp$y))) tmp$y = "all";
+    p = ggplot(tmp,aes(x=z,y=emp_sel,ymin=lci,ymax=uci,colour=y,fill=y));
+    if ("n" %in% names(tmp)){
+      p = p + geom_point(aes(size=n)) + scale_size_area() + 
+              geom_line();
+    }
+    p = p + 
+           geom_ribbon(alpha=0.3) + 
+           geom_line() + 
+           geom_hline(yintercept=c(0,0.5,1),linetype=3) + 
+           scale_y_continuous(limits=ylims,oob=scales::squish) + 
+           labs(x="size (mm CW)",y="empirical\nselectivity",
+                colour="study\nyear",fill="study\nyear",size="crab\nsampled") + 
+           theme(legend.position="inside",
+                 legend.position.inside=c(0.01,0.99),
+                 legend.justification.inside=c(0,1),
+                 legend.byrow=TRUE,
+                 legend.box="horizontal");
+    return(p);
+  }
+  grdPrd = list(z=lst$grids$z,d=lst$meds$d,t=lst$meds$t,f=lst$meds$f,s=lst$meds$s,h=factor("any"))
+  dfrPrd = prdMod(best_mdl,trms=c("all"),type="response",lst=grdPrd);
+  plotMod(dfrPrd,ylims=c(0,2))
+  dfrPrd = prdMod(best_mdl,trms=c("all"),type="link",lst=grdPrd);
+  plotMod(dfrPrd,ylims=c(-2,2))
+}

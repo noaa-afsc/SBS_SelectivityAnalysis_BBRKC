@@ -1,4 +1,4 @@
-#--fit various models for ln(r) using mgcv to fit GAMs for males using the TWEEDIE distribution----
+#--fit various models for ln(r) using mgcv to fit GAMs using the TWEEDIE distribution----
 require(DHARMa);
 require(dplyr);
 require(ggplot2);
@@ -6,27 +6,28 @@ require(gratia)
 require(mgcv);
 
 #--get censored data and prediction grids----
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
-lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.Males.RData"));
+dirPrj = rstudioapi::getActiveProject();
+dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability/Models_CombinedSex")
+lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.RData"));
 
 #--remove zeros, infs, questionable observed Rs----
-dfrDatp   = lst$dfrDat |> dplyr::filter(obsR<10, is.finite(lnR),between(z,15,150));
+dfrDatp   = lst$dfrDat |> dplyr::filter(obsR<10, is.finite(lnR),between(z,50,190));
 
 #--TWEEDIE regression models for lnR---------------------
 famTW = mgcv::tw(link="log");
 #--------ALL Z 2-WAY INTERACTIONS--------------------------
-  #--ln(r) = ti(z) + 
+  #--ln(r) = s(z) + 
   #          ti(d) + ti(t) + ti(f) + ti(s) +
   #--        ti(z,d) + ti(z,t) + ti(z,f) +ti(z,s)
-  ks=c(10,8);
+  ks=c(10,6);
   k1 = ks[1]; k2 = ks[2];
-  frmla  = obsR~ti(z,bs="ts",k=k1)   +
-             ti(d,bs="ts",k=k2)   + ti(t,bs="ts",k=k2)   + ti(f,bs="ts",k=k2)   + ti(s,bs="ts",k=k2) +
-             ti(z,d,bs="ts",k=c(k1,k2)) + ti(z,t,bs="ts",k=c(k1,k2)) + ti(z,f,bs="ts",k=c(k1,k2)) + ti(z,s,bs="ts",k=c(k1,k2));
+  frmla  = obsR~s(z,bs="ts",k=k1)   +
+                 ti(d,bs="ts",k=k2)   + ti(t,bs="ts",k=k2)   + ti(f,bs="ts",k=k2)   + ti(s,bs="ts",k=k2) +
+                 ti(z,d,bs="ts",k=c(k1,k2)) + ti(z,t,bs="ts",k=c(k1,k2)) + ti(z,f,bs="ts",k=c(k1,k2)) + ti(z,s,bs="ts",k=c(k1,k2));
   mdlTW_ZE2D = mgcv::gam(frmla,family=famTW,data=dfrDatp,select=TRUE,method="REML",fit=FALSE);
 
 if (FALSE){
-#--run cross validation-------------------------------------------------
+  #--run cross validation-------------------------------------------------
   source(file.path(dirThs,"../r_gam.prefit.functions.R"));
   source(file.path(dirThs,"../r_SelectModelByConcurvityFunctions.R"));
   set.seed(1111111);
@@ -35,6 +36,7 @@ if (FALSE){
                  mdl,
                  ks,
                  dfrData=dfrDatp,
+                 link="lnR",
                  numFolds=10,
                  concrv_opt=2,
                  doParallel=TRUE,
@@ -43,15 +45,15 @@ if (FALSE){
                  icmbs=NULL,
                  log=TRUE,
                  debug=FALSE);
-  wtsUtilities::saveObj(dfrCrsVal,file.path(dirThs,"rda_Step3b.TweedieModels_CrsVal.RData"));
+  wtsUtilities::saveObj(dfrCrsVal,file.path(dirThs,"rda_Step3b1.TweedieModels_CrsVal.RData"));
 }
 if (FALSE){
-#--evaluate best model-------------------------------------------------
+  #--evaluate best model-------------------------------------------------
   source(file.path(dirThs,"../r_gam.prefit.functions.R"));
   source(file.path(dirThs,"../r_SelectModelByConcurvityFunctions.R"));
   source(file.path(dirThs,"../r_PlotStats_BestModels.R"));
   mdl = mdlTW_ZE2D;
-  if (!exists("dfrCrsVal")) dfrCrsVal = wtsUtilities::getObj(file.path(dirThs,"rda_Step3b.TweedieModels_CrsVal.RData"));
+  if (!exists("dfrCrsVal")) dfrCrsVal = wtsUtilities::getObj(file.path(dirThs,"rda_Step3b1.TweedieModels_CrsVal.RData"));
   #--extract base model results
   dfrCrsVal1 = dfrCrsVal |> 
                  dplyr::filter(i==1) |> #--extract base model results
@@ -101,23 +103,27 @@ if (FALSE){
   DHARMa::plotQQunif(simResids);
   DHARMa::plotResiduals(simResids);
   plts = getModelPlots(best_mdl);
-  wtsUtilities::saveObj(dfrCrsValdp1,file.path(dirThs,"rda_Step3b.TweedieModels_OrderedModels.RData"));
-  wtsUtilities::saveObj(best_mdl,    file.path(dirThs,"rda_Step3b.TweedieModels_BestModel.RData"));
+  wtsUtilities::saveObj(dfrCrsValdp1,file.path(dirThs,"rda_Step3b2.TweedieModels_OrderedModels.RData"));
+  wtsUtilities::saveObj(best_mdl,    file.path(dirThs,"rda_Step3b3.TweedieModels_BestModel.RData"));
+  grdPrd = list(z=lst$grids$z,d=lst$meds$d,t=lst$meds$t,f=lst$meds$f,s=lst$meds$s)
+  dfrPrd = prdMod(best_mdl,trms=c("all"),type="response",lst=grdPrd);
+  plotMod(dfrPrd,ylims=c(0,2))
 }
 
 if (FALSE){
-#--best model + haul-level random effects
+  #--best model + haul-level random effects----
   lvls = c("any",unique(dfrDatp$h));
   dfrDatpp = dfrDatp |> dplyr::mutate(h=factor(h,levels=lvls));
   ks=c(10,8);
   k1 = ks[1]; k2 = ks[2];
-  frmla  = obsR~ti(z,bs="ts",k=k1) + ti(t,bs="ts",k=k2) + ti(f,bs="ts",k=k2) + 
-                  s(s,h,bs="fs",k=k2);
+  frmla  = obsR~s(z,bs="ts",k=10) + ti(f, bs = "ts", k = c(10)) +   # <== check "rda_Step3b3.TweedieModels_BestModel.RData" for best model
+                  ti(z,h,bs="fs",k=k2);   #--haul-level factor smooths
   mdl_bestRE = mgcv::gam(frmla,family=famTW,data=dfrDatpp,select=TRUE,method="REML",
                          drop.unused.levels=FALSE);#--use for RE with "any" factor level
-  wtsUtilities::saveObj(mdl_bestRE, file.path(dirThs,"rda_Step3b.TweedieModels_BestModelRE.RData"));
+  wtsUtilities::saveObj(mdl_bestRE, file.path(dirThs,"rda_Step3b4.TweedieModels_BestModelRE.RData"));
 #----function to predict values based on a model
   prdMod<-function(mdl,trms,lst,type="response",keep=NULL,p=0.05){
+    #--testing: mdl=mdl_bestRE; trms=c("all"); type="response"; lst=grdPrd; keep=NULL; p=0.05;
     dfr = wtsMGCV::createGridTbl(lst);
     if (any(trms=="all")){
       #--add intercept and all smooth terms
@@ -146,7 +152,8 @@ if (FALSE){
     return(prd);
   }
   plotMod<-function(tmp,ylims=c(0,1.5)){
-    if (all(is.na(tmp$y))) tmp$y = "all";
+    #--testing: tmp=dfrPrd; ylims=c(0,1.5);
+    if ((!any(names(tmp)=="y")) || all(is.na(tmp$y))) tmp$y = "all";
     p = ggplot(tmp,aes(x=z,y=emp_sel,ymin=lci,ymax=uci,colour=y,fill=y));
     if ("n" %in% names(tmp)){
       p = p + geom_point(aes(size=n)) + scale_size_area() + 
@@ -155,7 +162,7 @@ if (FALSE){
     p = p + 
            geom_ribbon(alpha=0.3) + 
            geom_line() + 
-           geom_hline(yintercept=0.5,linetype=3) + 
+           geom_hline(yintercept=c(0,0.5,1),linetype=3) + 
            scale_y_continuous(limits=ylims,oob=scales::squish) + 
            labs(x="size (mm CW)",y="empirical\nselectivity",
                 colour="study\nyear",fill="study\nyear",size="crab\nsampled") + 
@@ -168,7 +175,7 @@ if (FALSE){
   }
   grdPrd = list(z=lst$grids$z,d=lst$meds$d,t=lst$meds$t,f=lst$meds$f,s=lst$meds$s,h=factor("any"))
   dfrPrd = prdMod(mdl_bestRE,trms=c("all"),type="response",lst=grdPrd);
-  plotMod(dfrPrd)
+  plotMod(dfrPrd,ylims=c(0,2))
 }
   
 #--------ALL 2-WAY INTERACTIONS--------------------------

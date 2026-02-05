@@ -1,5 +1,6 @@
 #--get indiv data with sediment characteristics for all 83-112 NMFS hauls----
-  dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirPrj = rstudioapi::getActiveProject();
+dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability")
 
   #--get NMFS individual data----
   require(tcsamSurveyData);
@@ -55,10 +56,10 @@
   #--calculate CPUE by size bin by haul
   dfrCPUE = calcCPUE.ByHaul(dfrHD_NMFS,
                             dfrID_NMFS,
-                            bySex=TRUE,
+                            bySex=FALSE,
                             byMaturity=FALSE,
                             byShellCondition=FALSE,
                             bySize=TRUE,
-                            cutpts=seq(25,185,5)) |> 
+                            cutpts=seq(50,190,5)) |> 
               dplyr::mutate(SIZE=SIZE+2.5);#--shift to bin center
   wtsUtilities::saveObj(dfrCPUE,file.path(dirThs,"rda_Step4.dfrCPUE_NMFS.RData"));

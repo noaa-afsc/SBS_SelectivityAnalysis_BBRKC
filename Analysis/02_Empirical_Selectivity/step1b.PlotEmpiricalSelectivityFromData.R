@@ -1,36 +1,29 @@
 #--plot empirical selectivity results
 dirPrj = rstudioapi::getActiveProject();
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirThs = file.path(dirPrj,"Analysis/02_Empirical_Selectivity");
+setwd(dirThs);
 
 source(file.path(dirThs,"r_PlotEmpiricalSelectivity.R"));
 lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step1_EmpiricalSelectivityFromData.RData"));
+dfrZCs = lst$dfrZCs;
+dfrESs = lst$dfrESs;
 
 #--create plots
 pdf(file.path(dirThs,"fig_EmpiricalSelectivityFromData.pdf"),width=8,height=6);
 
-#--females
-dfrZCsp<-dfrZCs[(dfrZCs$x=="female")&(dfrZCs$z<=125),];
-dfrESsp<-dfrESs[(dfrESs$x=="female")&(dfrESs$z<=125),];
-plotEmpiricalSelectivity(dfrZCsp,dfrESsp,
-                          plotPoints=TRUE,
-                          points=list(alpha=0.2,size=3,dodge=0),
-                          plotLines=TRUE,
-                          plotViolins=FALSE,
-                          plotSmooths=TRUE,
-                          smooths=list(method="gam",formula=y~s(x,bs="cs",k=5),knots=c(25,50,75,100,125)));
-#--males
-dfrZCsp<-dfrZCs[(dfrZCs$x=="male")&(dfrZCs$z<=185),];
-dfrESsp<-dfrESs[(dfrESs$x=="male")&(dfrESs$z<=185),];
-plotEmpiricalSelectivity(dfrZCsp,dfrESsp,
-                          plotPoints=TRUE,
-                          points=list(alpha=0.2,size=3,dodge=0),
-                          plotLines=TRUE,
-                          plotViolins=FALSE,
-                          plotSmooths=TRUE,
-                          smooths=list(method="gam",formula=y~s(x,bs="cs",k=7),knots=c(25,50,75,100,125,150,175)));
+#--combined sexes
+plts<-plotEmpiricalSelectivity(dfrZCs,dfrESs,
+                               plotPoints=TRUE,
+                               points=list(alpha=0.2,size=3,dodge=0),
+                               plotLines=TRUE,
+                               plotViolins=FALSE,
+                               plotSmooths=TRUE,
+                               smooths=list(method="gam",formula=y~s(x,bs="cs",k=5),knots=c(25,50,75,100,125)));
+plts$all$ESs + geom_hline(yintercept=c(0,0.5,1),linetype=3);
+plts;
 dev.off();
 
-#--alernative version
+#--alternative version
 require(ggplot2)
 p1 = ggplot(data=dfrZCs,mapping=aes_string(x="z",y="n",colour="fleet")) +
        geom_line() + geom_point() +

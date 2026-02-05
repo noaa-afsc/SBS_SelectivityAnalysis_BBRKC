@@ -1,0 +1,1027 @@
+Started evalAllModels at 2026-01-08 09:17:48.032078
+
+
+Evaluating model 1: s(z)
+
+
+Evaluating model 2: s(z) + ti(z,s)
+
+
+Evaluating model 3: s(z) + ti(z,f)
+
+
+Evaluating model 6: s(z) + ti(z,t) + ti(z,s)
+
+
+Evaluating model 4: s(z) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 11: s(z) + ti(z,d) + ti(z,f)
+
+
+Evaluating model 10: s(z) + ti(z,d) + ti(z,s)
+
+
+Evaluating model 7: s(z) + ti(z,t) + ti(z,f)
+
+
+Evaluating model 9: s(z) + ti(z,d)
+
+
+Evaluating model 8: s(z) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 5: s(z) + ti(z,t)
+1, p ~ s(z, bs = "ts", k = c(10)), 0.01817656, 252.6629, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 12: s(z) + ti(z,d) + ti(z,f) + ti(z,s)
+2, p ~ s(z, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817697, 252.6634, NaN, TRUE, FALSE, FALSE, 
+5, p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817637, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 13: s(z) + ti(z,d) + ti(z,t)
+
+
+Evaluating model 14: s(z) + ti(z,d) + ti(z,t) + ti(z,s)
+3, p ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817728, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 15: s(z) + ti(z,d) + ti(z,t) + ti(z,f)
+9, p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.01817644, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 16: s(z) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+7, p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0181768, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 17: s(z) + ti(s)
+17, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.02154691, 252.7779, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 18: s(z) + ti(s) + ti(z,s)
+6, p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817682, 252.6634, NaN, TRUE, FALSE, FALSE, 
+4, p ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817724, 252.6635, NaN, TRUE, FALSE, FALSE, 
+11, p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817676, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 19: s(z) + ti(s) + ti(z,f)
+
+
+Evaluating model 20: s(z) + ti(s) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 21: s(z) + ti(s) + ti(z,t)
+10, p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817665, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 22: s(z) + ti(s) + ti(z,t) + ti(z,s)
+13, p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817644, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 23: s(z) + ti(s) + ti(z,t) + ti(z,f)
+19, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154643, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 24: s(z) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+18, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154634, 252.7782, NaN, TRUE, FALSE, FALSE, 
+21, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154612, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 25: s(z) + ti(s) + ti(z,d)
+
+
+Evaluating model 26: s(z) + ti(s) + ti(z,d) + ti(z,s)
+25, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.02154604, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 27: s(z) + ti(s) + ti(z,d) + ti(z,f)
+22, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154622, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 28: s(z) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+20, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154665, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 29: s(z) + ti(s) + ti(z,d) + ti(z,t)
+23, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0215465, 252.7784, NaN, TRUE, FALSE, FALSE, 
+8, p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817697, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 31: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+
+
+Evaluating model 30: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+14, p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817667, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 32: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+15, p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817679, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 33: s(z) + ti(f)
+12, p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817674, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 34: s(z) + ti(f) + ti(z,s)
+33, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)), 0.01818232, 252.6635, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 35: s(z) + ti(f) + ti(z,f)
+26, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.0215463, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 36: s(z) + ti(f) + ti(z,f) + ti(z,s)
+35, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01818074, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 37: s(z) + ti(f) + ti(z,t)
+34, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817992, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 38: s(z) + ti(f) + ti(z,t) + ti(z,s)
+27, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0215464, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 39: s(z) + ti(f) + ti(z,t) + ti(z,f)
+37, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817751, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 40: s(z) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+29, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154608, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 41: s(z) + ti(f) + ti(z,d)
+36, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01818048, 252.6637, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 42: s(z) + ti(f) + ti(z,d) + ti(z,s)
+41, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.01817944, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 43: s(z) + ti(f) + ti(z,d) + ti(z,f)
+16, p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817698, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 44: s(z) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+24, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154635, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 45: s(z) + ti(f) + ti(z,d) + ti(z,t)
+39, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01818092, 252.6638, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 46: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+38, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817713, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 47: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+28, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154662, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 48: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+42, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817982, 252.6637, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 49: s(z) + ti(f) + ti(s)
+31, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154619, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 50: s(z) + ti(f) + ti(s) + ti(z,s)
+49, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.0215526, 252.7785, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 51: s(z) + ti(f) + ti(s) + ti(z,f)
+30, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154622, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 52: s(z) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+45, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817787, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 53: s(z) + ti(f) + ti(s) + ti(z,t)
+43, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01818025, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 54: s(z) + ti(f) + ti(s) + ti(z,t) + ti(z,s)
+51, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154897, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 55: s(z) + ti(f) + ti(s) + ti(z,t) + ti(z,f)
+50, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.021549, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 56: s(z) + ti(f) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+53, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154728, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 57: s(z) + ti(f) + ti(s) + ti(z,d)
+40, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817802, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 58: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,s)
+57, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.02154841, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 59: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,f)
+44, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817895, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 60: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+52, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154913, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 61: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+47, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817791, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 62: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+54, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154866, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 63: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+55, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154896, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 64: s(z) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+46, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817735, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 65: s(z) + ti(t)
+65, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)), 0.01817702, 252.6634, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 66: s(z) + ti(t) + ti(z,s)
+58, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.0215471, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 67: s(z) + ti(t) + ti(z,f)
+67, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817682, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 68: s(z) + ti(t) + ti(z,f) + ti(z,s)
+66, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817698, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 69: s(z) + ti(t) + ti(z,t)
+59, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154893, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 70: s(z) + ti(t) + ti(z,t) + ti(z,s)
+32, p ~ s(z, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154642, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 71: s(z) + ti(t) + ti(z,t) + ti(z,f)
+69, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817686, 252.6633, NaN, TRUE, FALSE, FALSE, 
+56, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154911, 252.7787, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 72: s(z) + ti(t) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 73: s(z) + ti(t) + ti(z,d)
+61, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.0215473, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 74: s(z) + ti(t) + ti(z,d) + ti(z,s)
+73, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.01817685, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 75: s(z) + ti(t) + ti(z,d) + ti(z,f)
+68, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817687, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 76: s(z) + ti(t) + ti(z,d) + ti(z,f) + ti(z,s)
+60, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154911, 252.7786, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 77: s(z) + ti(t) + ti(z,d) + ti(z,t)
+71, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817684, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 78: s(z) + ti(t) + ti(z,d) + ti(z,t) + ti(z,s)
+48, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817897, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 79: s(z) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f)
+70, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817701, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 80: s(z) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+62, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154704, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 81: s(z) + ti(t) + ti(s)
+63, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154891, 252.7786, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 82: s(z) + ti(t) + ti(s) + ti(z,s)
+81, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.02154653, 252.7784, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 83: s(z) + ti(t) + ti(s) + ti(z,f)
+74, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817698, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 84: s(z) + ti(t) + ti(s) + ti(z,f) + ti(z,s)
+75, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817682, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 85: s(z) + ti(t) + ti(s) + ti(z,t)
+82, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154644, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 86: s(z) + ti(t) + ti(s) + ti(z,t) + ti(z,s)
+83, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154679, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 87: s(z) + ti(t) + ti(s) + ti(z,t) + ti(z,f)
+77, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817686, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 88: s(z) + ti(t) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+85, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154658, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 89: s(z) + ti(t) + ti(s) + ti(z,d)
+72, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817687, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 90: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,s)
+64, p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154716, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 91: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,f)
+89, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.02154652, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 92: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+84, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154635, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 93: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,t)
+79, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817684, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 94: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+76, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817686, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 95: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+87, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154632, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 96: s(z) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+78, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817699, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 97: s(z) + ti(t) + ti(f)
+86, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154636, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 98: s(z) + ti(t) + ti(f) + ti(z,s)
+97, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)), 0.01817781, 252.6637, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 99: s(z) + ti(t) + ti(f) + ti(z,f)
+98, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817728, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 100: s(z) + ti(t) + ti(f) + ti(z,f) + ti(z,s)
+99, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817897, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 101: s(z) + ti(t) + ti(f) + ti(z,t)
+90, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154643, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 102: s(z) + ti(t) + ti(f) + ti(z,t) + ti(z,s)
+91, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154631, 252.7781, NaN, TRUE, FALSE, FALSE, 
+93, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154622, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 103: s(z) + ti(t) + ti(f) + ti(z,t) + ti(z,f)
+
+
+Evaluating model 104: s(z) + ti(t) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+101, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817716, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 105: s(z) + ti(t) + ti(f) + ti(z,d)
+88, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154636, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 106: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,s)
+80, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817687, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 107: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,f)
+105, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.01817833, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 108: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+92, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154635, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 109: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,t)
+100, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817761, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 110: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+102, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817729, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 111: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+95, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154632, 252.7782, NaN, TRUE, FALSE, FALSE, 
+103, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817752, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 112: s(z) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 113: s(z) + ti(t) + ti(f) + ti(s)
+94, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154637, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 114: s(z) + ti(t) + ti(f) + ti(s) + ti(z,s)
+113, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.02154676, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 115: s(z) + ti(t) + ti(f) + ti(s) + ti(z,f)
+106, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817729, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 116: s(z) + ti(t) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+107, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817871, 252.6636, NaN, TRUE, FALSE, FALSE, 
+114, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.021549, 252.7787, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 117: s(z) + ti(t) + ti(f) + ti(s) + ti(z,t)
+
+
+Evaluating model 118: s(z) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,s)
+115, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154717, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 119: s(z) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,f)
+109, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817715, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 120: s(z) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+104, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817778, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 121: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d)
+117, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154715, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 122: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,s)
+96, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154636, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 123: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,f)
+121, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.02154887, 252.7787, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 124: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+116, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154724, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 125: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+118, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154719, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 126: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+110, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.0181773, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 127: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+119, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154715, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 128: s(z) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+111, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817732, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 129: s(z) + ti(d)
+108, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817749, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 130: s(z) + ti(d) + ti(z,s)
+129, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)), 0.01817633, 252.6632, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 131: s(z) + ti(d) + ti(z,f)
+122, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154712, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 132: s(z) + ti(d) + ti(z,f) + ti(z,s)
+130, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817659, 252.6635, NaN, TRUE, FALSE, FALSE, 
+131, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0181766, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 133: s(z) + ti(d) + ti(z,t)
+
+
+Evaluating model 134: s(z) + ti(d) + ti(z,t) + ti(z,s)
+123, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154722, 252.7782, NaN, TRUE, FALSE, FALSE, 
+133, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817642, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 135: s(z) + ti(d) + ti(z,t) + ti(z,f)
+
+
+Evaluating model 136: s(z) + ti(d) + ti(z,t) + ti(z,f) + ti(z,s)
+120, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154721, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 137: s(z) + ti(d) + ti(z,d)
+125, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154715, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 138: s(z) + ti(d) + ti(z,d) + ti(z,s)
+132, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817656, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 139: s(z) + ti(d) + ti(z,d) + ti(z,f)
+137, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.01817634, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 140: s(z) + ti(d) + ti(z,d) + ti(z,f) + ti(z,s)
+112, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817754, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 141: s(z) + ti(d) + ti(z,d) + ti(z,t)
+134, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817652, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 142: s(z) + ti(d) + ti(z,d) + ti(z,t) + ti(z,s)
+135, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817662, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 143: s(z) + ti(d) + ti(z,d) + ti(z,t) + ti(z,f)
+124, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154729, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 144: s(z) + ti(d) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+126, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154719, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 145: s(z) + ti(d) + ti(s)
+138, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817653, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 146: s(z) + ti(d) + ti(s) + ti(z,s)
+145, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.02154588, 252.7782, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 147: s(z) + ti(d) + ti(s) + ti(z,f)
+139, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817661, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 148: s(z) + ti(d) + ti(s) + ti(z,f) + ti(z,s)
+127, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154724, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 149: s(z) + ti(d) + ti(s) + ti(z,t)
+141, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817642, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 150: s(z) + ti(d) + ti(s) + ti(z,t) + ti(z,s)
+146, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154611, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 151: s(z) + ti(d) + ti(s) + ti(z,t) + ti(z,f)
+147, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154622, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 152: s(z) + ti(d) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+149, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154591, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 153: s(z) + ti(d) + ti(s) + ti(z,d)
+136, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817669, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 154: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,s)
+153, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.0215459, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 155: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,f)
+140, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817685, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 156: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+142, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817654, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 157: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,t)
+128, p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154729, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 158: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+143, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817662, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 159: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+148, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154619, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 160: s(z) + ti(d) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+150, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154605, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 161: s(z) + ti(d) + ti(f)
+151, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154612, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 162: s(z) + ti(d) + ti(f) + ti(z,s)
+161, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)), 0.01817683, 252.6632, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 163: s(z) + ti(d) + ti(f) + ti(z,f)
+154, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154618, 252.7785, NaN, TRUE, FALSE, FALSE, 
+162, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817902, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 164: s(z) + ti(d) + ti(f) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 165: s(z) + ti(d) + ti(f) + ti(z,t)
+163, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817835, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 166: s(z) + ti(d) + ti(f) + ti(z,t) + ti(z,s)
+155, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154611, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 167: s(z) + ti(d) + ti(f) + ti(z,t) + ti(z,f)
+165, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.0181787, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 168: s(z) + ti(d) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+152, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154624, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 169: s(z) + ti(d) + ti(f) + ti(z,d)
+157, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154592, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 170: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,s)
+169, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.01817867, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 171: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,f)
+166, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817778, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 172: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+144, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817674, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 173: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,t)
+164, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817797, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 174: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+156, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154631, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 175: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+167, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817827, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 176: s(z) + ti(d) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+158, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154611, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 177: s(z) + ti(d) + ti(f) + ti(s)
+159, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154613, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 178: s(z) + ti(d) + ti(f) + ti(s) + ti(z,s)
+177, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.02154751, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 179: s(z) + ti(d) + ti(f) + ti(s) + ti(z,f)
+170, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817738, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 180: s(z) + ti(d) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+179, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154745, 252.7782, NaN, TRUE, FALSE, FALSE, 
+178, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154855, 252.7783, NaN, TRUE, FALSE, FALSE, 
+171, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817855, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 181: s(z) + ti(d) + ti(f) + ti(s) + ti(z,t)
+
+
+Evaluating model 183: s(z) + ti(d) + ti(f) + ti(s) + ti(z,t) + ti(z,f)
+
+
+Evaluating model 182: s(z) + ti(d) + ti(f) + ti(s) + ti(z,t) + ti(z,s)
+173, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817873, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 184: s(z) + ti(d) + ti(f) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+168, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817736, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 185: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d)
+181, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.0215516, 252.7788, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 186: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,s)
+160, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154614, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 187: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,f)
+185, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.02154856, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 188: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+172, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817899, 252.6637, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 189: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+180, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154743, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 190: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+174, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817773, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 191: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+175, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817845, 252.6635, NaN, TRUE, FALSE, FALSE, 
+182, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154814, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 192: s(z) + ti(d) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+Evaluating model 193: s(z) + ti(d) + ti(t)
+183, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154749, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 194: s(z) + ti(d) + ti(t) + ti(z,s)
+193, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)), 0.01817657, 252.6635, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 195: s(z) + ti(d) + ti(t) + ti(z,f)
+194, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817676, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 196: s(z) + ti(d) + ti(t) + ti(z,f) + ti(z,s)
+195, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817689, 252.6633, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 197: s(z) + ti(d) + ti(t) + ti(z,t)
+186, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154878, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 198: s(z) + ti(d) + ti(t) + ti(z,t) + ti(z,s)
+197, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817658, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 199: s(z) + ti(d) + ti(t) + ti(z,t) + ti(z,f)
+187, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154742, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 200: s(z) + ti(d) + ti(t) + ti(z,t) + ti(z,f) + ti(z,s)
+184, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154755, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 201: s(z) + ti(d) + ti(t) + ti(z,d)
+189, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154803, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 202: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,s)
+176, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817738, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 203: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,f)
+201, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.01817671, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 204: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,f) + ti(z,s)
+196, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817697, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 205: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,t)
+199, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817693, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 206: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,t) + ti(z,s)
+190, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154805, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 207: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f)
+191, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154748, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 208: s(z) + ti(d) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+188, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154974, 252.7786, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 209: s(z) + ti(d) + ti(t) + ti(s)
+198, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.0181768, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 210: s(z) + ti(d) + ti(t) + ti(s) + ti(z,s)
+209, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.02154604, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 211: s(z) + ti(d) + ti(t) + ti(s) + ti(z,f)
+202, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817675, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 212: s(z) + ti(d) + ti(t) + ti(s) + ti(z,f) + ti(z,s)
+210, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154642, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 213: s(z) + ti(d) + ti(t) + ti(s) + ti(z,t)
+203, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817687, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 214: s(z) + ti(d) + ti(t) + ti(s) + ti(z,t) + ti(z,s)
+211, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154654, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 215: s(z) + ti(d) + ti(t) + ti(s) + ti(z,t) + ti(z,f)
+205, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817657, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 216: s(z) + ti(d) + ti(t) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+213, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154611, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 217: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d)
+200, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.018177, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 218: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,s)
+192, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154897, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 219: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,f)
+217, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.02154621, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 220: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+204, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817698, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 221: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,t)
+212, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154629, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 222: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+215, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154623, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 223: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+214, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154618, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 224: s(z) + ti(d) + ti(t) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+207, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817663, 252.6631, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 225: s(z) + ti(d) + ti(t) + ti(f)
+206, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817679, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 226: s(z) + ti(d) + ti(t) + ti(f) + ti(z,s)
+225, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)), 0.0181767, 252.6632, NaN, TRUE, FALSE, TRUE, 
+
+
+Evaluating model 227: s(z) + ti(d) + ti(t) + ti(f) + ti(z,f)
+218, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154639, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 228: s(z) + ti(d) + ti(t) + ti(f) + ti(z,f) + ti(z,s)
+226, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817984, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 229: s(z) + ti(d) + ti(t) + ti(f) + ti(z,t)
+227, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817992, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 230: s(z) + ti(d) + ti(t) + ti(f) + ti(z,t) + ti(z,s)
+219, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0215462, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 231: s(z) + ti(d) + ti(t) + ti(f) + ti(z,t) + ti(z,f)
+221, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.0215461, 252.7781, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 232: s(z) + ti(d) + ti(t) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+229, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817988, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 233: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d)
+216, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154631, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 234: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,s)
+208, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817667, 252.6632, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 235: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,f)
+228, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01818011, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 236: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+233, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.01817981, 252.6634, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 237: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,t)
+220, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154627, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 238: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+230, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817999, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 239: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+231, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817997, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 240: s(z) + ti(d) + ti(t) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+223, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154622, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 241: s(z) + ti(d) + ti(t) + ti(f) + ti(s)
+222, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154618, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 242: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,s)
+241, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)), 0.02154625, 252.7785, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 243: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,f)
+234, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817984, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 244: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+242, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154934, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 245: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,t)
+243, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154942, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 246: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,s)
+235, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817992, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 247: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,f)
+237, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.01817986, 252.6635, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 248: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+232, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01818011, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 249: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d)
+245, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154919, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 250: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,s)
+224, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154629, 252.7782, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 251: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,f)
+249, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)), 0.0215492, 252.7783, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 252: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+244, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154949, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 253: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+246, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154932, 252.7784, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 254: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+236, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.0181801, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 255: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+238, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01817998, 252.6636, NaN, TRUE, FALSE, FALSE, 
+
+
+Evaluating model 256: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+239, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.01817996, 252.6636, NaN, TRUE, FALSE, FALSE, 
+247, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154944, 252.7784, NaN, TRUE, FALSE, FALSE, 
+250, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154933, 252.7784, NaN, TRUE, FALSE, FALSE, 
+251, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.0215494, 252.7784, NaN, TRUE, FALSE, FALSE, 
+248, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154951, 252.7785, NaN, TRUE, FALSE, FALSE, 
+253, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)), 0.02154918, 252.7784, NaN, TRUE, FALSE, FALSE, 
+240, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.01818011, 252.6637, NaN, TRUE, FALSE, FALSE, 
+252, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154948, 252.7785, NaN, TRUE, FALSE, FALSE, 
+255, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)), 0.02154943, 252.7785, NaN, TRUE, FALSE, FALSE, 
+254, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154932, 252.7784, NaN, TRUE, FALSE, FALSE, 
+256, p ~ s(z, bs = "ts", k = c(10)) + ti(d, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(s, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)), 0.02154951, 252.7785, NaN, TRUE, FALSE, FALSE, 
+Finished evalAllModels logging at 2026-01-08 09:18:20.652272
+Elapsed time was 32.6201939582825

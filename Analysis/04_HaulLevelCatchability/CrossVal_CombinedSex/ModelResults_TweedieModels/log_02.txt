@@ -1,0 +1,601 @@
+Started evalAllModels at 2026-01-08 11:32:47.413673
+
+
+icmbs for next model: 1 0 0 0 0 0 0 0 0 
+Evaluating model 1: s(z)
+
+
+icmbs for next model: 1 0 0 0 0 0 0 0 1 
+Evaluating model 2: s(z) + ti(z,s)
+
+
+icmbs for next model: 1 0 0 0 0 0 0 1 1 
+Evaluating model 4: s(z) + ti(z,f) + ti(z,s)
+
+
+icmbs for next model: 1 0 0 0 0 0 0 1 0 
+Evaluating model 3: s(z) + ti(z,f)
+
+
+icmbs for next model: 1 0 0 0 0 0 1 0 0 
+Evaluating model 5: s(z) + ti(z,t)
+
+
+icmbs for next model: 1 0 0 0 0 0 1 1 0 
+Evaluating model 7: s(z) + ti(z,t) + ti(z,f)
+
+
+icmbs for next model: 1 0 0 0 0 0 1 0 1 
+
+
+icmbs for next model:Evaluating model 6: s(z) + ti(z,t) + ti(z,s)
+ 1 0 0 0 0 1 0 1 0 
+Evaluating model 11: s(z) + ti(z,d) + ti(z,f)
+
+
+icmbs for next model: 1 0 0 0 0 1 0 0 0 
+Evaluating model 9: s(z) + ti(z,d)
+
+
+icmbs for next model: 1 0 0 0 0 0 1 1 1 
+Evaluating model 8: s(z) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+icmbs for next model: 1 0 0 0 0 1 0 0 1 
+Evaluating model 10: s(z) + ti(z,d) + ti(z,s)
+model 5 result:
+
+Family: Tweedie(p=1.869) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+3.31 4.77  total = 9.08 
+
+ML score: 515.2379     
+
+Summary:
+
+Family: Tweedie(p=1.869) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6))
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.55016    0.08012   19.35   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+          edf Ref.df     F p-value    
+s(z)    3.306      9 22.07  <2e-16 ***
+ti(z,t) 4.773     45  0.19   0.056 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.0335   Deviance explained = 8.92%
+-ML = 515.24  Scale est. = 0.95613   n = 343
+calculating llsTrn for Tweedie family. scale =  0.9561277 
+calculated llsTrn for Tweedie family
+
+Concurvity:
+      para       s(z)    ti(z,t) 
+0.48672013 0.49501780 0.01787977 
+calculating llsTst for Tweedie family
+calculated llsTst for Tweedie family
+
+Results for model 5: obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) 0.0334686503224847 1028.26780149606 0.11211907951546 TRUE FALSE TRUE -499.827529718967 -1.45722311871419 -31.78622990433 -1.67295946864895 
+# A tibble: 1 × 25
+      i frmla       smths   rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>       <chr>  <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     5 "obsR ~ s(… s(z)… 0.0335 1028.    0.112     3.84    0.884 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <dbl>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 0 1 0 1 1 
+Evaluating model 12: s(z) + ti(z,d) + ti(z,f) + ti(z,s)
+model 9 result:
+
+Family: Tweedie(p=1.871) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+3.303 0.926  total = 5.23 
+
+ML score: 516.1905     
+
+Summary:
+
+Family: Tweedie(p=1.871) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6))
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.57106    0.08175   19.22   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+          edf Ref.df      F p-value    
+s(z)    3.303      9 26.461  <2e-16 ***
+ti(z,d) 0.926     45  0.024   0.301    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.0248   Deviance explained = 6.66%
+-ML = 516.19  Scale est. = 0.97051   n = 343
+model 3 result:
+
+Family: Tweedie(p=1.871) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+3.3389 0.0023  total = 4.34 
+
+ML score: 516.241     
+
+Summary:
+
+Family: Tweedie(p=1.871) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 
+    6))
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.58059    0.08213   19.25   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+             edf Ref.df     F p-value    
+s(z)    3.338865      9 36.88  <2e-16 ***
+ti(z,f) 0.002313     45  0.00   0.616    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.0252   Deviance explained = 6.22%
+-ML = 516.24  Scale est. = 0.97277   n = 343
+calculating llsTrn for Tweedie family. scale =  0.9705078 
+calculated llsTrn for Tweedie family
+
+Concurvity:
+     para      s(z)   ti(z,d) 
+0.5112673 0.6765888 0.1994812 
+calculating llsTst for Tweedie family
+calculated llsTst for Tweedie family
+
+Results for model 9: obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) 0.0248422830487204 1026.69082881682 0.104351041984861 TRUE FALSE FALSE -504.729069441223 -1.47151332198607 -31.7965209028212 -1.67350110014848 
+# A tibble: 1 × 25
+calculating llsTrn for Tweedie family. scale =  0.9727658 
+calculated llsTrn for Tweedie family
+
+Concurvity:
+      para       s(z)    ti(z,f) 
+0.52065823 0.87731531 0.06451315 
+calculating llsTst for Tweedie family
+calculated llsTst for Tweedie family
+
+Results for model 3: obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.0252000777068966 1024.46626011451 0.101227079143701 TRUE FALSE FALSE -505.683915765183 -1.47429713051074 -31.8425902365654 -1.67592580192449 
+# A tibble: 1 × 25
+      i frmla       smths   rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>       <chr>  <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     9 "obsR ~ s(… s(z)… 0.0248 1027.    0.104     3.78    0.919 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 0 1 1 0 0 
+Evaluating model 13: s(z) + ti(z,d) + ti(z,t)
+      i frmla       smths   rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>       <chr>  <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     3 "obsR ~ s(… s(z)… 0.0252 1024.    0.101     3.79    0.917 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 0 1 1 0 1 
+Evaluating model 14: s(z) + ti(z,d) + ti(z,t) + ti(z,s)
+model 2 result:
+
+Family: Tweedie(p=1.872) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+3.33 1.69  total = 6.01 
+
+ML score: 515.8479     
+
+Summary:
+
+Family: Tweedie(p=1.872) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 
+    6))
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.57440    0.08179   19.25   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+          edf Ref.df      F p-value    
+s(z)    3.326      9 35.391  <2e-16 ***
+ti(z,s) 1.685     45  0.071   0.088 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.0234   Deviance explained = 6.85%
+-ML = 515.85  Scale est. = 0.97102   n = 343
+calculating llsTrn for Tweedie family. scale =  0.9710206 
+calculated llsTrn for Tweedie family
+
+Concurvity:
+      para       s(z)    ti(z,s) 
+0.62193854 0.90642625 0.05084301 
+calculating llsTst for Tweedie family
+calculated llsTst for Tweedie family
+
+Results for model 2: obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.0233887796693008 1027.07347708651 0.100999089397522 TRUE FALSE FALSE -504.341969027612 -1.47038474935164 -31.8580291673794 -1.67673837723049 
+# A tibble: 1 × 25
+      i frmla       smths   rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>       <chr>  <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     2 "obsR ~ s(… s(z)… 0.0234 1027.    0.101     3.80    0.915 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 0 1 1 1 0 
+Evaluating model 15: s(z) + ti(z,d) + ti(z,t) + ti(z,f)
+model 7 result:
+
+Family: Tweedie(p=1.869) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+3.3059 4.7732 0.0009  total = 9.08 
+
+ML score: 515.238     
+
+Summary:
+
+Family: Tweedie(p=1.869) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6))
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.55015    0.08012   19.35   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+              edf Ref.df     F p-value    
+s(z)    3.3058644      9 22.07  <2e-16 ***
+ti(z,t) 4.7732231     45  0.19   0.056 .  
+ti(z,f) 0.0008632     45  0.00   0.524    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.0335   Deviance explained = 8.92%
+-ML = 515.24  Scale est. = 0.95613   n = 343
+calculating llsTrn for Tweedie family. scale =  0.9561279 
+calculated llsTrn for Tweedie family
+
+Concurvity:
+     para      s(z)   ti(z,t)   ti(z,f) 
+0.8707898 0.9298253 0.1233377 0.1657527 
+calculating llsTst for Tweedie family
+calculated llsTst for Tweedie family
+
+Results for model 7: obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.0334688419170445 1028.26970725319 0.112136815326879 TRUE FALSE FALSE -499.826926615268 -1.45722136039437 -31.7860911427533 -1.67295216540807 
+# A tibble: 1 × 25
+      i frmla       smths   rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>       <chr>  <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     7 "obsR ~ s(… s(z)… 0.0335 1028.    0.112     3.84    0.884 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 0 1 1 1 1 
+Evaluating model 16: s(z) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+model 6 result:
+
+Family: Tweedie(p=1.87) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+3.29 4.59 1.53  total = 10.41 
+
+ML score: 514.9364     
+
+Summary:
+
+Family: Tweedie(p=1.87) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.54520    0.07986   19.35   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+          edf Ref.df      F p-value    
+s(z)    3.295      9 21.824  <2e-16 ***
+ti(z,t) 4.585     45  0.179  0.0583 .  
+ti(z,s) 1.526     45  0.058  0.1074    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.0313   Deviance explained = 9.38%
+-ML = 514.94  Scale est. = 0.95514   n = 343
+calculating llsTrn for Tweedie family. scale =  0.9551417 
+calculated llsTrn for Tweedie family
+
+Concurvity:
+     para      s(z)   ti(z,t)   ti(z,s) 
+0.8636204 0.9509821 0.1354201 0.2957911 
+calculating llsTst for Tweedie family
+calculated llsTst for Tweedie family
+
+Results for model 6: obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.0312867369912009 1030.76130430806 0.114090494867076 TRUE FALSE FALSE -498.831768082521 -1.4543200235642 -31.7837956011382 -1.67283134742832 
+# A tibble: 1 × 25
+      i frmla       smths   rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>       <chr>  <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     6 "obsR ~ s(… s(z)… 0.0313 1031.    0.114     3.85    0.882 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 1 0 0 0 0 
+Evaluating model 17: s(z) + ti(s)
+Caught warning calculating mdlres
+model 17 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 0 0 1 
+Evaluating model 18: s(z) + ti(s) + ti(z,s)
+Caught warning calculating mdlres
+model 18 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 0 1 0 
+Evaluating model 19: s(z) + ti(s) + ti(z,f)
+Caught warning calculating mdlres
+model 19 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 0 1 1 
+Evaluating model 20: s(z) + ti(s) + ti(z,f) + ti(z,s)
+Caught warning calculating mdlres
+model 20 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 1 0 0 
+Evaluating model 21: s(z) + ti(s) + ti(z,t)
+Caught warning calculating mdlres
+model 21 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 1 0 1 
+Evaluating model 22: s(z) + ti(s) + ti(z,t) + ti(z,s)
+Caught warning calculating mdlres
+model 22 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 1 1 0 
+Evaluating model 23: s(z) + ti(s) + ti(z,t) + ti(z,f)
+Caught warning calculating mdlres
+model 23 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 1 1 1 
+Evaluating model 24: s(z) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+Caught warning calculating mdlres
+model 24 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 0 0 0 
+Evaluating model 25: s(z) + ti(s) + ti(z,d)
+Caught warning calculating mdlres
+model 25 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 0 0 1 
+Evaluating model 26: s(z) + ti(s) + ti(z,d) + ti(z,s)
+Caught warning calculating mdlres
+model 26 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 0 1 0 
+Evaluating model 27: s(z) + ti(s) + ti(z,d) + ti(z,f)
+Caught warning calculating mdlres
+model 27 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 0 1 1 
+Evaluating model 28: s(z) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+Caught warning calculating mdlres
+model 28 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 1 0 0 
+Evaluating model 29: s(z) + ti(s) + ti(z,d) + ti(z,t)
+Caught warning calculating mdlres
+model 29 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 1 0 1 
+Evaluating model 30: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+Caught warning calculating mdlres
+model 30 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 1 1 0 
+Evaluating model 31: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+Caught warning calculating mdlres
+model 31 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 1 1 1 
+Evaluating model 32: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+Caught warning calculating mdlres
+model 32 result is NULL.
+
+
+icmbs for next model: 1 0 0 1 0 0 0 0 0 
+Evaluating model 33: s(z) + ti(f)
+Caught warning calculating mdlres
+model 33 result is NULL.
+
+
+icmbs for next model: 1 0 0 1 0 0 0 0 1 
+Evaluating model 34: s(z) + ti(f) + ti(z,s)
+Caught warning calculating mdlres
+model 34 result is NULL.
+model 11 result:
+
+Family: Tweedie(p=1.873) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+3.20 1.32 2.57  total = 8.1 
+
+ML score: 515.7673     
+
+Summary:
+
+Family: Tweedie(p=1.873) 
+Link function: identity 
+
+Formula:
+obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6))
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.55378    0.08075   19.24   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+          edf Ref.df      F p-value    
+s(z)    3.205      9 20.926  <2e-16 ***
+ti(z,d) 1.319     45  0.036   0.257    
+ti(z,f) 2.574     45  0.091   0.122    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.0244   Deviance explained = 7.88%
+-ML = 515.77  Scale est. = 0.96645   n = 343
+Caught warning calculating mdlres
+model 1 result is NULL.
+calculating llsTrn for Tweedie family. scale =  0.9664542 
+calculated llsTrn for Tweedie family
+
+Concurvity:
+     para      s(z)   ti(z,d)   ti(z,f) 
+0.8412322 0.9398391 0.4041628 0.2510787 
+calculating llsTst for Tweedie family
+calculated llsTst for Tweedie family
+
+Results for model 11: obsR ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.0243647846014032 1030.38860999911 0.132893930709419 TRUE FALSE FALSE -502.130097437751 -1.46393614413338 -31.6357797571783 -1.66504103985149 
+# A tibble: 1 × 25
+      i frmla       smths   rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>       <chr>  <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    11 "obsR ~ s(… s(z)… 0.0244 1030.    0.133     3.74    0.913 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+Caught warning calculating mdlres
+model 13 result is NULL.
+Caught warning calculating mdlres
+model 10 result is NULL.
+Caught warning calculating mdlres
+model 8 result is NULL.
+Caught warning calculating mdlres
+model 16 result is NULL.
+Caught warning calculating mdlres
+model 12 result is NULL.
+Caught warning calculating mdlres
+model 14 result is NULL.
+Caught warning calculating mdlres
+model 4 result is NULL.
+Caught warning calculating mdlres
+model 15 result is NULL.
+Finished evalAllModels logging at 2026-01-08 15:30:51.010495

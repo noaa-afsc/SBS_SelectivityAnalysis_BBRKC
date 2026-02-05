@@ -1,0 +1,1188 @@
+Started evalAllModels at 2026-01-08 10:38:24.442094
+
+
+icmbs for next model: 1 0 0 0 0 0 0 0 0 
+
+
+icmbs for next model: 1 0 0 0 0 0 1 1 0 
+Evaluating model 1: s(z)
+Evaluating model 7: s(z) + ti(z,t) + ti(z,f)
+
+
+icmbs for next model: 1 0 0 0 0 0 0 0 1 
+Evaluating model 2: s(z) + ti(z,s)
+
+
+icmbs for next model: 1 0 0 0 0 1 0 1 0 
+Evaluating model 11: s(z) + ti(z,d) + ti(z,f)
+
+
+icmbs for next model: 1 0 0 0 0 0 1 0 0 
+
+
+icmbs for next model: 1 0 0 0 0 0 0 1 1 
+Evaluating model 5: s(z) + ti(z,t)
+Evaluating model 4: s(z) + ti(z,f) + ti(z,s)
+
+
+icmbs for next model: 1 0 0 0 0 0 1 1 1 
+Evaluating model 8: s(z) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+icmbs for next model: 1 0 0 0 0 0 0 1 0 
+
+
+icmbs for next model: 1 0 0 0 0 1 0 0 0 
+
+
+icmbs for next model: 1 0 0 0 0 1 0 0 1 
+Evaluating model 9: s(z) + ti(z,d)
+Evaluating model 10: s(z) + ti(z,d) + ti(z,s)
+Evaluating model 3: s(z) + ti(z,f)
+
+
+icmbs for next model: 1 0 0 0 0 0 1 0 1 
+Evaluating model 6: s(z) + ti(z,t) + ti(z,s)
+model 1 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10))
+
+Estimated degrees of freedom:
+8.82  total = 9.82 
+
+ML score: 1504.064     
+
+Concurvity:
+        para         s(z) 
+8.510905e-21 3.176708e-22 
+
+Results for model 1: p ~ s(z, bs = "ts", k = c(10)) 0.419910864862279 2957.7977216584 0.130281282181031 TRUE TRUE TRUE -1468.97428286377 -2.81412697866622 -72.5163635131238 -2.68579124122681 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     1 "p ~ s(z, b… s(z)  0.420 2958.    0.130    0.112     4.71 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <dbl>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 0 1 0 1 1 
+Evaluating model 12: s(z) + ti(z,d) + ti(z,f) + ti(z,s)
+model 9 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 7.58 24.08  total = 32.66 
+
+ML score: 1348.88     
+
+Concurvity:
+     para      s(z)   ti(z,d) 
+0.6999857 0.8101357 0.5762235 
+
+Results for model 9: p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) 0.493097892078855 2613.16524544067 0.0215006442602643 TRUE TRUE FALSE -1272.19437621604 -2.43715397742537 -69.7547096119373 -2.58350776340508 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     9 "p ~ s(z, b… s(z)… 0.493 2613.   0.0215    0.121     4.93 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+model 5 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 4.34 27.72  total = 33.07 
+
+ML score: 1363.313     
+
+
+icmbs for next model: 1 0 0 0 0 1 1 0 0 
+Evaluating model 13: s(z) + ti(z,d) + ti(z,t)
+
+Concurvity:
+     para      s(z)   ti(z,t) 
+0.6509379 0.6158744 0.7430148 
+
+Results for model 5: p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) 0.498302758282514 2643.22402033636 0.00823670748387823 TRUE TRUE FALSE -1286.59578004964 -2.46474287365831 -78.0563558241346 -2.89097614163461 
+# A tibble: 1 × 25
+model 2 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 8.0 10.4  total = 19.38 
+
+ML score: 1436.526     
+
+Concurvity:
+     para      s(z)   ti(z,s) 
+0.5160332 0.8758917 0.4946811 
+
+Results for model 2: p ~ s(z, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.454121561224823 2804.80398151861 0.0356664236436835 TRUE TRUE FALSE -1380.86935175176 -2.64534358573135 -57.2559169903842 -2.12058951816238 
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     5 "p ~ s(z, b… s(z)… 0.498 2643.  0.00824    0.128     4.66 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+# A tibble: 1 × 25
+
+
+icmbs for next model: 1 0 0 0 0 1 1 0 1 
+Evaluating model 14: s(z) + ti(z,d) + ti(z,t) + ti(z,s)
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     2 "p ~ s(z, b… s(z)… 0.454 2805.   0.0357    0.104     4.55 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 0 1 1 1 0 
+model 3 result:
+
+Family:Evaluating model 15: s(z) + ti(z,d) + ti(z,t) + ti(z,f)
+ binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 0.924 23.364  total = 25.29 
+
+ML score: 1395.702     
+
+Concurvity:
+     para      s(z)   ti(z,f) 
+0.4055053 0.7675454 0.4371024 
+
+Results for model 3: p ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.475035897900832 2725.24613573525 0.0627919733817276 TRUE TRUE FALSE -1335.33831114773 -2.5581193700148 -65.8015203381942 -2.43709334585904 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     3 "p ~ s(z, b… s(z)… 0.475 2725.   0.0628    0.146     5.09 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 0 0 1 1 1 1 
+Evaluating model 16: s(z) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+model 11 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 7.47 24.37  5.46  total = 38.29 
+
+ML score: 1339.914     
+
+Concurvity:
+     para      s(z)   ti(z,d)   ti(z,f) 
+0.8585269 0.9270629 0.7548557 0.1299450 
+
+Results for model 11: p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.499593381565734 2590.83702604552 0.0103954070774096 TRUE TRUE FALSE -1253.94182846706 -2.40218741085644 -72.8135394203279 -2.69679775630844 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    11 "p ~ s(z, b… s(z)… 0.500 2591.   0.0104    0.124     4.96 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+model 6 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 4.34 27.69  2.99  total = 36.02 
+
+ML score: 1359.874     
+
+
+icmbs for next model: 1 0 0 0 1 0 0 0 0 
+Evaluating model 17: s(z) + ti(s)
+
+Concurvity:
+      para       s(z)    ti(z,t)    ti(z,s) 
+0.78224260 0.94126312 0.81196188 0.08755641 
+Caught warning calculating mdlres
+model 17 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 0 0 1 
+Evaluating model 18: s(z) + ti(s) + ti(z,s)
+
+Results for model 6: p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.501964557284895 2633.17705580573 0.0107577915193918 TRUE TRUE FALSE -1277.81725518652 -2.44792577621939 -80.1104330829603 -2.96705307714668 
+# A tibble: 1 × 25
+Caught warning calculating mdlres
+model 18 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 0 1 0 
+Evaluating model 19: s(z) + ti(s) + ti(z,f)
+Caught warning calculating mdlres
+model 19 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 0 1 1 
+Evaluating model 20: s(z) + ti(s) + ti(z,f) + ti(z,s)
+Caught warning calculating mdlres
+model 20 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 1 0 0 
+Evaluating model 21: s(z) + ti(s) + ti(z,t)
+Caught warning calculating mdlres
+model 21 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 1 0 1 
+Evaluating model 22: s(z) + ti(s) + ti(z,t) + ti(z,s)
+Caught warning calculating mdlres
+model 22 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 1 1 0 
+Evaluating model 23: s(z) + ti(s) + ti(z,t) + ti(z,f)
+Caught warning calculating mdlres
+model 23 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 0 1 1 1 
+Evaluating model 24: s(z) + ti(s) + ti(z,t) + ti(z,f) + ti(z,s)
+Caught warning calculating mdlres
+model 24 result is NULL.
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     6 "p ~ s(z, b… s(z)… 0.502 2633.   0.0108    0.129     4.65 TRUE        -1
+
+
+icmbs for next model: 1 0 0 0 1 1 0 0 0 
+Evaluating model 25: s(z) + ti(s) + ti(z,d)
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+Caught warning calculating mdlres
+model 25 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 0 0 1 
+Evaluating model 26: s(z) + ti(s) + ti(z,d) + ti(z,s)
+
+
+icmbs for next model: 1 0 0 0 1 1 0 1 0 
+Evaluating model 27: s(z) + ti(s) + ti(z,d) + ti(z,f)
+Caught warning calculating mdlres
+model 27 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 0 1 1 
+Evaluating model 28: s(z) + ti(s) + ti(z,d) + ti(z,f) + ti(z,s)
+Caught warning calculating mdlres
+model 26 result is NULL.
+Caught warning calculating mdlres
+model 28 result is NULL.
+
+
+icmbs for next model:
+
+icmbs for next model:  1 0 0 0 1 1 1 0 01 0 0 0 1 1 1 0 1  
+
+Evaluating model 30: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,s)
+Evaluating model 29: s(z) + ti(s) + ti(z,d) + ti(z,t)
+Caught warning calculating mdlres
+model 29 result is NULL.
+Caught warning calculating mdlres
+model 30 result is NULL.
+
+
+icmbs for next model: 1 0 0 0 1 1 1 1 0 
+Evaluating model 31: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f)
+
+
+icmbs for next model: 1 0 0 0 1 1 1 1 1 
+Evaluating model 32: s(z) + ti(s) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+Caught warning calculating mdlres
+model 31 result is NULL.
+Caught warning calculating mdlres
+model 32 result is NULL.
+
+
+icmbs for next model: 1 0 0 1 0 0 0 0 0 
+Evaluating model 33: s(z) + ti(f)
+
+
+icmbs for next model: 1 0 0 1 0 0 0 0 1 
+Evaluating model 34: s(z) + ti(f) + ti(z,s)
+model 33 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10))
+
+Estimated degrees of freedom:
+8.71 8.86  total = 18.58 
+
+ML score: 1396.236     
+
+Concurvity:
+        para         s(z)        ti(f) 
+8.679000e-21 3.201429e-02 7.836130e-03 
+
+Results for model 33: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) 0.470150739522741 2701.27539581565 0.0895218516502842 TRUE TRUE TRUE -1331.68303202181 -2.55111691958202 -62.2470550463291 -2.30544648319737 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    33 "p ~ s(z, b… s(z)… 0.470 2701.   0.0895    0.140     5.26 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <dbl>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 0 0 1 0 
+Evaluating model 35: s(z) + ti(f) + ti(z,f)
+model 13 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6)) + ti(z, t, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 4.08 22.88 24.95  total = 52.9 
+
+ML score: 1305.593     
+
+Concurvity:
+     para      s(z)   ti(z,d)   ti(z,t) 
+0.8341702 0.9453660 0.5558960 0.5781935 
+
+Results for model 13: p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) 0.536652378714629 2493.26922205591 0.049673062297876 TRUE TRUE FALSE -1189.44868474701 -2.27863732710155 -79.4165366971845 -2.94135321100683 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    13 "p ~ s(z, b… s(z)… 0.537 2493.   0.0497    0.125     4.74 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 0 0 1 1 
+Evaluating model 36: s(z) + ti(f) + ti(z,f) + ti(z,s)
+model 10 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 2.59 23.15 15.39  total = 42.13 
+
+ML score: 1332.989     
+
+Concurvity:
+     para      s(z)   ti(z,d)   ti(z,s) 
+0.8237870 0.9445079 0.7422822 0.4353474 
+
+Results for model 10: p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.501900679384916 2582.10769762954 0.0218700993415266 TRUE TRUE FALSE -1243.81136145471 -2.38278038592856 -71.8195523964378 -2.65998342209029 
+# A tibble: 1 × 25
+model 34 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+8.70 8.86 1.89  total = 20.45 
+
+ML score: 1390.636     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,s) 
+0.9037246 0.9375940 0.1431683 0.0189113 
+
+Results for model 34: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.472537488054152 2689.41794111721 0.0786630411021569 TRUE TRUE FALSE -1323.26170529161 -2.53498410975404 -61.8048853338609 -2.28906982718003 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    10 "p ~ s(z, b… s(z)… 0.502 2582.   0.0219    0.113     4.49 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    34 "p ~ s(z, b… s(z)… 0.473 2689.   0.0787    0.140     5.22 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+model 35 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, f, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 3.79  8.78 17.08  total = 30.65 
+
+ML score: 1345.611     
+
+
+icmbs for next model: 1 0 0 1 0 0 1 0 0 
+Evaluating model 37: s(z) + ti(f) + ti(z,t)
+
+
+icmbs for next model: 1 0 0 1 0 0 1 0 1 
+Evaluating model 38: s(z) + ti(f) + ti(z,t) + ti(z,s)
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,f) 
+0.9998722 0.7754926 0.9438206 0.8644153 
+
+Results for model 35: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.493291222503174 2594.05739836951 0.012026705074824 TRUE TRUE FALSE -1262.37715077932 -2.4183470321443 -63.8091285093948 -2.36330105590351 
+# A tibble: 1 × 25
+model 7 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 1.01 27.03 19.41  total = 48.46 
+
+ML score: 1325.652     
+model 4 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 
+    6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 5.2 19.6 14.5  total = 40.32 
+
+ML score: 1384.599     
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    35 "p ~ s(z, b… s(z)… 0.493 2594.   0.0120    0.153     5.38 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+Concurvity:
+     para      s(z)   ti(z,t)   ti(z,f) 
+0.8159192 0.8591390 0.6223628 0.5042559 
+
+
+icmbs for next model: 1 0 0 1 0 0 1 1 0 
+Evaluating model 39: s(z) + ti(f) + ti(z,t) + ti(z,f)
+
+Concurvity:
+     para      s(z)   ti(z,f)   ti(z,s) 
+0.7079631 0.9208981 0.7303129 0.3707419 
+
+Results for model 7: p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.527036777139503 2535.57503363215 0.134016864752297 TRUE TRUE FALSE -1214.27206274764 -2.32619169108744 -74.6375010589258 -2.76435189107133 
+
+Results for model 4: p ~ s(z, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.478657006594105 2676.47724486177 0.0421194837596434 TRUE TRUE FALSE -1292.67303126215 -2.47638511736044 -66.340956145323 -2.45707244982678 
+# A tibble: 1 × 25
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     7 "p ~ s(z, b… s(z)… 0.527 2536.    0.134    0.132     4.64 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     4 "p ~ s(z, b… s(z)… 0.479 2676.   0.0421    0.133     4.76 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 0 1 1 1 
+Evaluating model 40: s(z) + ti(f) + ti(z,t) + ti(z,f) + ti(z,s)
+
+
+icmbs for next model: 1 0 0 1 0 1 0 0 0 
+Evaluating model 41: s(z) + ti(f) + ti(z,d)
+model 37 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, t, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 3.26  8.74 27.43  total = 40.43 
+
+ML score: 1298.678     
+
+Concurvity:
+      para       s(z)      ti(f)    ti(z,t) 
+0.67348395 0.52914251 0.04881154 0.67249527 
+
+Results for model 37: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) 0.537783871697968 2479.77834299446 0.00996161323012936 TRUE TRUE FALSE -1197.12898847486 -2.29335055263383 -70.072065866045 -2.59526169874241 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    37 "p ~ s(z, b… s(z)… 0.538 2480.  0.00996    0.141     5.07 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 1 0 0 1 
+Evaluating model 42: s(z) + ti(f) + ti(z,d) + ti(z,s)
+model 41 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, d, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 7.10  8.54 23.21  total = 39.86 
+
+ML score: 1300.906     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,d) 
+0.7834917 0.7842912 0.1268480 0.5791925 
+
+Results for model 41: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) 0.514677160382325 2491.18891103611 0.00202130885508048 TRUE TRUE FALSE -1202.29737397988 -2.30325167429095 -70.7652309324743 -2.62093447898053 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    41 "p ~ s(z, b… s(z)… 0.515 2491.  0.00202    0.145     5.31 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 1 0 1 0 
+Evaluating model 43: s(z) + ti(f) + ti(z,d) + ti(z,f)
+model 36 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 4.23  8.75 16.90  1.33  total = 32.22 
+
+ML score: 1344.569     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,f)   ti(z,s) 
+0.9999259 0.9319421 0.9604942 0.9449315 0.7315181 
+
+Results for model 36: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.491961621744865 2592.20126034469 0.0144977760556395 TRUE TRUE FALSE -1259.31774172958 -2.41248609526739 -65.1807322351451 -2.41410119389426 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    36 "p ~ s(z, b… s(z)… 0.492 2592.   0.0145    0.154     5.39 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 1 0 1 1 
+Evaluating model 44: s(z) + ti(f) + ti(z,d) + ti(z,f) + ti(z,s)
+model 38 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 3.07  8.67 27.76 13.78  total = 54.28 
+
+ML score: 1299.744     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,t)   ti(z,s) 
+0.9238706 0.9059062 0.2110256 0.7512851 0.2251852 
+
+Results for model 38: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.542424543859686 2460.27992411044 0.00890255906950737 TRUE TRUE FALSE -1170.003256858 -2.2413855495364 -68.1632086518515 -2.52456328340191 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    38 "p ~ s(z, b… s(z)… 0.542 2460.  0.00890    0.137     4.94 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 1 1 0 0 
+Evaluating model 45: s(z) + ti(f) + ti(z,d) + ti(z,t)
+model 43 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 0.98  8.54 23.47 15.98  total = 49.97 
+
+ML score: 1293.386     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,d)   ti(z,f) 
+0.9999058 0.9032623 0.9797089 0.7132415 0.5225477 
+
+Results for model 43: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.520134223697216 2460.03146601451 0.0217795292273515 TRUE TRUE FALSE -1175.55315583961 -2.25201753992262 -71.2606507952611 -2.63928336278745 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    43 "p ~ s(z, b… s(z)… 0.520 2460.   0.0218    0.147     5.28 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 1 1 0 1 
+Evaluating model 46: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,s)
+model 39 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 0.987  8.636 25.111 16.291  total = 52.02 
+
+ML score: 1288.343     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,t)   ti(z,f) 
+0.9999027 0.8863148 0.9715199 0.6502276 0.6711553 
+
+Results for model 39: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.544017427216036 2436.72973250473 0.0740011216521253 TRUE TRUE FALSE -1161.63748294761 -2.22535916273489 -71.2651562780876 -2.63945023252176 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    39 "p ~ s(z, b… s(z)… 0.544 2437.   0.0740    0.126     4.79 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 1 1 1 0 
+Evaluating model 47: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f)
+model 8 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", 
+    k = c(10, 6))
+
+Estimated degrees of freedom:
+ 1.01 25.74 20.09 14.41  total = 62.24 
+
+ML score: 1317.98     
+
+Concurvity:
+     para      s(z)   ti(z,t)   ti(z,f)   ti(z,s) 
+0.9039009 0.9370585 0.6480303 0.7168437 0.5003836 
+
+Results for model 8: p ~ s(z, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.538944522053834 2492.52134521346 0.138050801319963 TRUE TRUE FALSE -1175.8164137282 -2.25252186537969 -83.6371110917144 -3.09767078117461 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1     8 "p ~ s(z, b… s(z)… 0.539 2493.    0.138    0.133     4.50 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 0 1 1 1 1 
+Evaluating model 48: s(z) + ti(f) + ti(z,d) + ti(z,t) + ti(z,f) + ti(z,s)
+model 45 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 2.92  8.50 22.61 24.47  total = 59.5 
+
+ML score: 1252.825     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,d)   ti(z,t) 
+0.8772002 0.9157401 0.1923008 0.6473971 0.3784494 
+
+Results for model 45: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) 0.568921978812662 2358.35920009481 0.113663616555304 TRUE TRUE FALSE -1114.66616965433 -2.1353758039355 -89.5625157658668 -3.31713021355062 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    45 "p ~ s(z, b… s(z)… 0.569 2358.    0.114    0.148     5.03 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 0 1 1 0 0 0 0 
+Evaluating model 49: s(z) + ti(f) + ti(s)
+Caught warning calculating mdlres
+model 49 result is NULL.
+
+
+icmbs for next model: 1 0 0 1 1 0 0 0 1 
+Evaluating model 50: s(z) + ti(f) + ti(s) + ti(z,s)
+Caught warning calculating mdlres
+model 50 result is NULL.
+
+
+icmbs for next model: 1 0 0 1 1 0 0 1 0 
+Evaluating model 51: s(z) + ti(f) + ti(s) + ti(z,f)
+Caught warning calculating mdlres
+model 51 result is NULL.
+
+
+icmbs for next model: 1 0 0 1 1 0 0 1 1 
+Evaluating model 52: s(z) + ti(f) + ti(s) + ti(z,f) + ti(z,s)
+model 40 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 
+    6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 3.4014  8.7455 27.1248  4.9337  0.0011  total = 45.21 
+
+ML score: 1294.142     
+Caught warning calculating mdlres
+model 52 result is NULL.
+
+
+icmbs for next model: 1 0 0 1 1 0 1 0 0 
+Evaluating model 53: s(z) + ti(f) + ti(s) + ti(z,t)
+Caught warning calculating mdlres
+model 53 result is NULL.
+model 15 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", 
+    k = c(10, 6))
+
+Estimated degrees of freedom:
+ 0.974 23.205 22.398 18.560  total = 66.14 
+
+ML score: 1284.385     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,t)   ti(z,f)   ti(z,s) 
+0.9999764 0.9882336 0.9838232 0.8334720 0.6041454 0.3592319 
+
+Results for model 40: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.54188917303331 2468.18356311939 0.0138054975881951 TRUE FALSE FALSE -1185.10578278152 -2.27031759153548 -71.9882476733154 -2.66623139530798 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    40 "p ~ s(z, b… s(z)… 0.542 2468.   0.0138    0.138     5.06 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+Concurvity:
+     para      s(z)   ti(z,d)   ti(z,t)   ti(z,f) 
+0.9239948 0.9301950 0.5821640 0.4443654 0.7137115 
+
+Results for model 15: p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.555084923106324 2420.35730217848 0.147968106439821 TRUE TRUE FALSE -1138.46778676035 -2.18097277157156 -87.1768450148325 -3.22877203758639 
+# A tibble: 1 × 25
+
+
+icmbs for next model: 1 0 1 0 0 1 0 1 0 
+Evaluating model 75: s(z) + ti(t) + ti(z,d) + ti(z,f)
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    15 "p ~ s(z, b… s(z)… 0.555 2420.    0.148    0.135     4.82 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 0 1 0 0 1 1 1 0 
+Evaluating model 79: s(z) + ti(t) + ti(z,d) + ti(z,t) + ti(z,f)
+model 12 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", 
+    k = c(10, 6))
+
+Estimated degrees of freedom:
+ 0.99 22.84 24.60 15.64  total = 65.07 
+
+ML score: 1307.144     
+
+Concurvity:
+     para      s(z)   ti(z,d)   ti(z,f)   ti(z,s) 
+0.8966375 0.9419880 0.6996770 0.8974301 0.7028279 
+
+Results for model 12: p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.533146567832238 2446.64148447106 0.0453964193303401 TRUE TRUE FALSE -1152.35342924189 -2.20757361923734 -75.3413454409474 -2.79042020151657 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    12 "p ~ s(z, b… s(z)… 0.533 2447.   0.0454    0.126     4.63 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+
+
+icmbs for next model: 1 1 1 1 1 1 1 0 0 
+Evaluating model 253: s(z) + ti(d) + ti(t) + ti(f) + ti(s) + ti(z,d) + ti(z,t)
+Caught warning calculating mdlres
+model 253 result is NULL.
+model 16 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 
+    6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", 
+    k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 0.993 22.645 22.260 17.337 14.414  total = 78.65 
+
+ML score: 1275.038     
+
+Concurvity:
+     para      s(z)   ti(z,d)   ti(z,t)   ti(z,f)   ti(z,s) 
+0.9445092 0.9568334 0.7550562 0.5095701 0.8411119 0.6499114 
+
+Results for model 16: p ~ s(z, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.567916458908578 2380.33015448335 0.0963627220788729 TRUE TRUE FALSE -1102.03903531876 -2.11118589141525 -90.5386127900541 -3.35328195518719 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    16 "p ~ s(z, b… s(z)… 0.568 2380.   0.0964    0.142     4.72 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+model 75 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + 
+    ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 
+    6))
+
+Estimated degrees of freedom:
+ 0.856  8.470 22.477 26.234  total = 59.04 
+
+ML score: 1283.473     
+
+Concurvity:
+     para      s(z)     ti(t)   ti(z,d)   ti(z,f) 
+0.8919223 0.8799642 0.3687633 0.3905702 0.9100619 
+
+Results for model 75: p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.543914955431823 2393.68027692296 0.0160210150288864 TRUE TRUE FALSE -1133.24453260039 -2.17096653754864 -87.2707182454748 -3.23224882390648 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    75 "p ~ s(z, b… s(z)… 0.544 2394.   0.0160    0.165     5.36 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+model 47 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 2.986  8.501 22.755 24.671  0.765  total = 60.68 
+
+ML score: 1252.01     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,d)   ti(z,t)   ti(z,f) 
+0.9999378 0.9843509 0.9897297 0.7201029 0.5526360 0.3574616 
+
+Results for model 47: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.571383693815854 2355.40529666575 0.100956280877376 TRUE TRUE FALSE -1111.31292600722 -2.12895196553108 -89.7088343548191 -3.32254942054886 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    47 "p ~ s(z, b… s(z)… 0.571 2355.    0.101    0.146     5.05 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+model 44 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 
+    6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 3.20  8.59 24.77  5.22  1.00  total = 43.78 
+
+ML score: 1294.596     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,d)   ti(z,f)   ti(z,s) 
+0.9999644 0.9868838 0.9855974 0.8114791 0.4534260 0.6195092 
+
+Results for model 44: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.516335806511831 2487.65201044868 0.0287998890583222 TRUE FALSE FALSE -1193.19837844113 -2.28582064835466 -73.2509743828329 -2.71299905121603 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    44 "p ~ s(z, b… s(z)… 0.516 2488.   0.0288    0.152     5.41 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <int>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+model 46 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + 
+    ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, s, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 2.36  8.42 22.36 23.77  6.01  total = 63.93 
+
+ML score: 1248.387     
+
+Concurvity:
+     para      s(z)     ti(f)   ti(z,d)   ti(z,t)   ti(z,s) 
+0.9495979 0.9600009 0.3576702 0.7895231 0.3960282 0.6405002 
+
+Results for model 46: p ~ s(z, bs = "ts", k = c(10)) + ti(f, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, s, bs = "ts", k = c(10, 6)) 0.574993611740612 2345.70262211892 0.12538301160466 TRUE TRUE FALSE -1101.89732446408 -2.11091441468214 -93.4979025434812 -3.46288527938819 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    46 "p ~ s(z, b… s(z)… 0.575 2346.    0.125    0.157     5.16 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+model 79 result:
+
+Family: binomial 
+Link function: logit 
+
+Formula:
+p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + 
+    ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 
+    6)) + ti(z, f, bs = "ts", k = c(10, 6))
+
+Estimated degrees of freedom:
+ 0.935  8.509 22.188 23.435 17.456  total = 73.52 
+
+ML score: 1244.634     
+
+Concurvity:
+     para      s(z)     ti(t)   ti(z,d)   ti(z,t)   ti(z,f) 
+0.9914854 0.9307082 0.5717886 0.5122354 0.6104332 0.7732810 
+
+Results for model 79: p ~ s(z, bs = "ts", k = c(10)) + ti(t, bs = "ts", k = c(10)) + ti(z, d, bs = "ts", k = c(10, 6)) + ti(z, t, bs = "ts", k = c(10, 6)) + ti(z, f, bs = "ts", k = c(10, 6)) 0.582028188538633 2302.98467797076 0.174378626697287 TRUE TRUE FALSE -1071.69914958058 -2.05306350494364 -98.4515983615496 -3.64635549487221 
+# A tibble: 1 × 25
+      i frmla        smths  rsqr   aic rsqr_prd mspe_prd mase_prd signifp sigdxp
+  <int> <chr>        <chr> <dbl> <dbl>    <dbl>    <dbl>    <dbl> <lgl>    <dbl>
+1    79 "p ~ s(z, b… s(z)… 0.582 2303.    0.174    0.166     5.33 TRUE        -1
+# ℹ 15 more variables: sigvalp <dbl>, signifs <lgl>, sigdxs <dbl>,
+#   sigvals <dbl>, concrv_tst <lgl>, concrv_idx <int>, concrv_val <dbl>,
+#   llMdl <dbl>, llTrn <dbl>, scrTrn <dbl>, llTst <dbl>, scrTst <dbl>,
+#   lstMdl <named list>, lstTrn <named list>, lstTst <named list>
+#################################
+
+Caught warning calculating mdlres
+model 42 result is NULL.
+Caught warning calculating mdlres
+model 14 result is NULL.
+Caught warning calculating mdlres
+model 48 result is NULL.
+Finished evalAllModels logging at 2026-01-08 10:38:48.062601

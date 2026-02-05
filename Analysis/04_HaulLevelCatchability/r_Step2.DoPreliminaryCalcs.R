@@ -2,7 +2,7 @@
 
 #--read project setup info----
 dirPrj = rstudioapi::getActiveProject();
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability")
 fn = file.path(dirPrj,"rda_ProjectSetup.RData");
 s  = wtsUtilities::getObj(fn);
 

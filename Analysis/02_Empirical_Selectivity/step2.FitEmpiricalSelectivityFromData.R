@@ -5,7 +5,8 @@ library(magrittr)
 library(mgcv);
 
 dirPrj = rstudioapi::getActiveProject();
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirThs = file.path(dirPrj,"Analysis/02_Empirical_Selectivity");
+setwd(dirThs);
 lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step1_EmpiricalSelectivityFromData.RData"));
 
 #--fit with smooth models
@@ -39,8 +40,8 @@ plotEstimates<-function(dfrPrdSel,nm){
 #----list for models
 lstMods<-list();
 #----fit models by sex
-sexes<-c("male","female");
-mxZs <-c(180,   120);     #--need one for each sex
+sexes<-c("all");
+mxZs <-c(190);     #--need one for each sex
 nXs<-length(sexes);
 for (x_ in 1:nXs){
   sex<-sexes[x_]; mxZ<-mxZs[x_];
@@ -64,11 +65,11 @@ for (x_ in 1:nXs){
 rm(x_,sex,dfrESsp,nm);
 
 #--get model estimate of selectivity
-yfs<-c(2013:2018);
+yfs<-c(2013:2016);
 dfrModEsts<-NULL;
 for (x_ in 1:nXs){
   sex = sexes[x_];
-  zs<-seq(25,mxZs[x_],by=5);
+  zs<-seq(50,mxZs[x_],by=5);
   #--annual model
   nm1 <-paste0(sexes[x_],"s: annual fits")
   mdl1 = lstMods[[nm1]];

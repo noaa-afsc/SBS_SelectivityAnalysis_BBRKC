@@ -291,7 +291,7 @@ The "observed" annual empirical survey catchability curvess are substantially va
 
 ```{r}
 #| label: fig-SurvSel-AnnualM
-#| fig-cap: "Comparison of annual empirical estimates of NMFS survey selectivity for male Tanner crab. An overall (unweighted) smoothed trend and simple uncertainty interval are indicated by the thick blue line and grey shading."
+#| fig-cap: "Comparison of annual empirical estimates of NMFS survey selectivity for BBRKC. An overall (unweighted) smoothed trend and simple uncertainty interval are indicated by the thick blue line and grey shading."
 #| fig-asp: 0.6
   dfrESsp = dfrESs |> dplyr::filter(x=="all",dplyr::between(z,60,170));
   tmp = dfrESsp;
@@ -567,6 +567,26 @@ The time-invariant estimates of catchability, $S(z)$ ($= exp(\alpha+s(z))$, wher
 
 ```{r EmpSel_CleanupM}
   rm(dfrESsp,dfrESsp1);#--keep model results
+```
+
+### Best models
+
+Based on the summary model statistics (Tables [-@tbl-EmpSel-MdlsSmryM] and [-@tbl-EmpSel-MdlsSmryF]) and the residuals plots, Model 3 is the most satisfactory of the three models for each sex to describe NMFS survey catchability for male and female Tanner crab using the "observed" empirical selectivity. In addition to fitting the data equal to or better than the other two models, Model 3 captures the population-level uncertainty in the estimated curves more appropriately than the other two models when the goal is to apply the curves to arbitrary years.
+
+```{r fig_EmpSel-BestFcns}
+#| results: asis
+#| fig-cap: "Estimated selectivity for arbitrary years, $S(z)$, from the model regarded as the most satisfactory, Model 3."
+#| fig-width: 9
+#| fig-asp: 0.6
+  dfr = dplyr::bind_rows(
+          prd3mt
+  )
+  p1 = ggplot(dfr,aes(x=z,y=emp_sel,ymin=lci,ymax=uci)) +
+        geom_line() + geom_ribbon(alpha=0.3) + 
+        ylim(c(0,NA)) + 
+        labs(x="size (mm CW)",y="estimated selectivity");
+  lstFigs = c(lstFigs,wtsQMD::printGGplot(p1,ori="L"));
+  rm(dfr,p1);
 ```
 
 ```{r EmpSel_SaveMdls}

@@ -2,11 +2,59 @@
 
 #--read project setup info----
 dirPrj = rstudioapi::getActiveProject();
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability")
 fn = file.path(dirPrj,"rda_ProjectSetup.RData");
 s  = wtsUtilities::getObj(fn);
 
-##--Function to extract  hauls and individuals from SBS+sediment data----
+##--load SBS data with interpolated sediment info----
+lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step1a_SBS_DataWithSedData.RData"));
+
+#--calculate haul-level size-specific empirical proportions from SBS + sed data----
+dfrSD_SBS = lst$dfrSD_SBS;
+dfrHD_BSFRF_SBS = lst$dfrHD_BSFRF_SBS;
+dfrID_BSFRF_SBS = lst$dfrID_BSFRF_SBS;
+dfrHD_NMFS_SBS  = lst$dfrHD_NMFS_SBS;
+dfrID_NMFS_SBS  = lst$dfrID_NMFS_SBS;
+rm(lst);
+
+##--determine unique years----
+uYs<-sort(unique(dfrSD_SBS$YEAR));
+
+##--set up processing parameters----
+aggBySex           =TRUE;                     #<==NOTE: combining sexes for BBRKC
+aggByMaturity      =TRUE;
+aggByShellCondition=TRUE;
+cutpts             =seq(from=50,to=190,by=5); #<==
+truncate.low       =TRUE;
+truncate.high      =FALSE;
+verbosity          =0;
+
+nc<-length(cutpts);
+delta<-cutpts[2]-cutpts[1];
+sizebins<-(cutpts[2:nc]+cutpts[1:(nc-1)])/2;
+minSize<-c(min(sizebins)); names(minSize)<-c("ALL");
+maxSize<-c(max(sizebins)); names(maxSize)<-c("ALL");
+center<-as.numeric(c((maxSize["ALL"]+minSize["ALL"])/2)); names(center)<-c("ALL");
+width <-as.numeric(c((maxSize["ALL"]-minSize["ALL"])));   names(width) <-c("ALL");
+
+##--drop "missing" sex data----
+nmiss_BSFRF = dfrID_BSFRF_SBS |> dplyr::filter(SEX=="MISSING") |> nrow();
+nmiss_NMFS  = dfrID_NMFS_SBS  |> dplyr::filter(SEX=="MISSING") |> nrow();
+dfrID_BSFRF_SBS = dfrID_BSFRF_SBS |> dplyr::filter(SEX!="MISSING");
+dfrID_NMFS_SBS  = dfrID_NMFS_SBS  |> dplyr::filter(SEX!="MISSING");
+
+##--apply cut points to sizes----
+dfrID_BSFRF_SBS$SIZE<-cutpts[cut(dfrID_BSFRF_SBS$SIZE,breaks=cutpts,include.lowest=TRUE)]+delta/2;
+dfrID_NMFS_SBS$SIZE <-cutpts[cut(dfrID_NMFS_SBS$SIZE, breaks=cutpts,include.lowest=TRUE)]+delta/2;
+
+##--apply sampling factor to numIndivs and set to 1 <==NEW 2026-01-08!!
+###--not ideal, but need to do this at some point because otherwise end up with multiple proportions in same size bin for same station
+dfrID_BSFRF_SBS = dfrID_BSFRF_SBS |> dplyr::mutate(numIndivs = SAMPLING_FACTOR*numIndivs,
+                                                   SAMPLING_FACTOR = 1);
+dfrID_NMFS_SBS  = dfrID_NMFS_SBS  |> dplyr::mutate(numIndivs = SAMPLING_FACTOR*numIndivs,
+                                                   SAMPLING_FACTOR = 1);
+
+##--Function to extract hauls and individuals from SBS+sediment data----
 #'
 #' @title Extract hauls and individuals from SBS+sediment data
 #' 
@@ -24,6 +72,9 @@ s  = wtsUtilities::getObj(fn);
 #' @export
 #' 
 extractHaulsAndIndivs<-function(dfrSDr,dfrHD,dfrID,resampleIndivs=FALSE){
+  #--for testing: dfrSDr=dfrRSD_SBS;dfrHD=dfrYHD_BSFRF_SBS;dfrID=dfrYID_BSFRF_SBS;resampleIndivs=FALSE;
+  #--convert START_HOUR in dfrHD to text because sqldf is now (2026-01-07) having problems with hms format from `hms` package
+  dfrHD$START_HOUR = as.character(dfrHD$START_HOUR);
   #--order resampled stations by GIS_STATION (could be duplicates)
   qry<- "select * from dfrSDr order by GIS_STATION;";
   dfrSDr<-sqldf::sqldf(qry);
@@ -59,74 +110,6 @@ extractHaulsAndIndivs<-function(dfrSDr,dfrHD,dfrID,resampleIndivs=FALSE){
   dfrHDr$newHAULJOIN<-1:nrow(dfrHDr);#append "new" HAULJOIN
   return(list(dfrSDr=dfrSDr,dfrHDr=dfrHDr,dfrIDr=dfrIDr));
 }
-
-#--interpolate sediment data to SBS haul data locations----
-#--load "raw" SBS haul data
-lst = wtsUtilities::getObj(file.path(s$dirs$SBS_Data,"rda_Step1_SBS_RawData.RData"));
-
-#--load sediment data (phi, sorting) interpolated to haul locations
-dfrHD_sed = wtsUtilities::getObj(file.path(s$dirs$SedAnls,
-                                           "rda_dfrHD_All_NMFS_WithInterpolatedSedValues.RData"));
-
-#--join sediment data to NMFS SBS haul data by YEAR and GIS_STATION (equivalent to using HAULJOIN)
-#----note: geometry has to be dropped because dfrHD_NMFS_SBS is a dataframe, not a tibble or sf object
-dfrHD_NMFS_SBS  = lst$dfrHD_NMFS_SBS |>  
-                    dplyr::inner_join((dfrHD_sed |> sf::st_drop_geometry() |>
-                                          dplyr::select(YEAR,GIS_STATION,phi,sorting)),
-                                       by=c("YEAR","GIS_STATION"));
-lst$dfrHD_NMFS_SBS = dfrHD_NMFS_SBS;
-
-#--join sediment data to BSFRF SBS haul data by YEAR and GIS_STATION (can't use HAULJOIN--not equivalent)
-#----note: geometry has to be dropped because dfrHD_BSFRF_SBS is a dataframe, not a tibble or sf object
-dfrHD_BSFRF_SBS = lst$dfrHD_BSFRF_SBS |>  
-                    dplyr::inner_join((dfrHD_sed |> sf::st_drop_geometry() |>
-                                          dplyr::select(YEAR,GIS_STATION,phi,sorting)),
-                                       by=c("YEAR","GIS_STATION"));
-
-lst$dfrHD_BSFRF_SBS = dfrHD_BSFRF_SBS;
-##--save SBS data with interpolated sediment info----
-wtsUtilities::saveObj(lst,file.path(dirThs,"rda_Step1a_SBS_DataWithSedData.RData"));
-rm(dfrHD_sed,dfrHD_BSFRF_SBS,dfrHD_NMFS_SBS);
-
-#--calculate haul-level size-specific empirical proportions from SBS + sed data----
-dfrSD_SBS = lst$dfrSD_SBS;
-dfrHD_BSFRF_SBS = lst$dfrHD_BSFRF_SBS;
-dfrID_BSFRF_SBS = lst$dfrID_BSFRF_SBS;
-dfrHD_NMFS_SBS  = lst$dfrHD_NMFS_SBS;
-dfrID_NMFS_SBS  = lst$dfrID_NMFS_SBS;
-rm(lst);
-
-##--determine unique years----
-uYs<-sort(unique(dfrSD_SBS$YEAR));
-
-##--set up processing parameters----
-aggBySex           =FALSE;
-aggByMaturity      =TRUE;
-aggByShellCondition=TRUE;
-cutpts             =seq(from=5,to=185,by=5);
-truncate.low       =TRUE;
-truncate.high      =FALSE;
-verbosity          =0;
-
-nc<-length(cutpts);
-delta<-cutpts[2]-cutpts[1];
-sizebins<-(cutpts[2:nc]+cutpts[1:(nc-1)])/2;
-minSize<-c(min(sizebins),min(sizebins)); names(minSize)<-c("MALE","FEMALE");
-maxSize<-c(max(sizebins),132.5);         names(maxSize)<-c("MALE","FEMALE");
-center<-as.numeric(c((maxSize["MALE"]+minSize["MALE"])/2,
-                     (maxSize["FEMALE"]+minSize["FEMALE"])/2)); names(center)<-c("MALE","FEMALE");
-width <-as.numeric(c((maxSize["MALE"]-minSize["MALE"]),  
-                     (maxSize["FEMALE"]-minSize["FEMALE"])));   names(width) <-c("MALE","FEMALE");
-
-##--drop "missing" sex data----
-nmiss_BSFRF = dfrID_BSFRF_SBS |> dplyr::filter(SEX=="MISSING") |> nrow();
-nmiss_NMFS  = dfrID_NMFS_SBS  |> dplyr::filter(SEX=="MISSING") |> nrow();
-dfrID_BSFRF_SBS = dfrID_BSFRF_SBS |> dplyr::filter(SEX!="MISSING");
-dfrID_NMFS_SBS  = dfrID_NMFS_SBS  |> dplyr::filter(SEX!="MISSING");
-
-##--apply cut points to sizes----
-dfrID_BSFRF_SBS$SIZE<-cutpts[cut(dfrID_BSFRF_SBS$SIZE,breaks=cutpts,include.lowest=TRUE)]+delta/2;
-dfrID_NMFS_SBS$SIZE <-cutpts[cut(dfrID_NMFS_SBS$SIZE, breaks=cutpts,include.lowest=TRUE)]+delta/2;
 
 ##--calculate proportions----
 testing = TRUE;

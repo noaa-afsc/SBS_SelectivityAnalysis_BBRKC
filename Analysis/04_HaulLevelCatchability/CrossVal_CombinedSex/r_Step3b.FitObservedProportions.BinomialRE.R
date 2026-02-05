@@ -1,4 +1,4 @@
-#--fit various models for ln(r) using mgcv to fit GAMs for males using the BINOMIAL distribution----
+#--fit various models for ln(r) using mgcv to fit GAMs for combined sex using the BINOMIAL distribution----
 require(DHARMa);
 require(dplyr);
 require(ggplot2);
@@ -10,8 +10,7 @@ dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
 lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.Males.RData"));
 
 #--remove zeros, infs, questionable observed Rs----
-#dfrDatp   = lst$dfrDat |> dplyr::filter(obsR<10, is.finite(lnR),between(z,15,150));
-dfrDatp   = lst$dfrDat |> dplyr::filter(between(z,15,150));
+dfrDatp   = lst$dfrDat |> dplyr::filter(between(z,50,190));
 lvls = c("any",unique(dfrDatp$h));
 dfrDatpp = dfrDatp |> dplyr::mutate(h=factor(h,levels=lvls));
 

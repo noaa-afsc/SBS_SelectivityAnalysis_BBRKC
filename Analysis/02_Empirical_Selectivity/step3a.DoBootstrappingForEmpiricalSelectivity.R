@@ -2,12 +2,13 @@
 require(tcsamSurveyData);
 
 dirPrj = rstudioapi::getActiveProject();
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirThs = file.path(dirPrj,"Analysis/02_Empirical_Selectivity");
+setwd(dirThs);
 
 source(file.path(dirThs,"r_extractHaulsAndIndivs.R"));
 source(file.path(dirThs,"r_calcEmpiricalSelectivity.R"));
 
-dfn = file.path(dirPrj,"Analysis/00a_SBS_Data/rda_Step1_SBS_RawData.RData");#--SBS data list object
+dfn = file.path(dirPrj,"Analysis/01_SBS_Data/rda_Step1_SBS_RawData.RData");#--SBS data list object
 lst = wtsUtilities::getObj(dfn);
 dfrSD_SBS       = lst$dfrSD_SBS;
 dfrHD_BSFRF_SBS = lst$dfrHD_BSFRF_SBS;
@@ -16,10 +17,10 @@ dfrHD_NMFS_SBS  = lst$dfrHD_NMFS_SBS;
 dfrID_NMFS_SBS  = lst$dfrID_NMFS_SBS;
 
 #--set up processing parameters
-aggBySex           =FALSE;
+aggBySex           =TRUE;
 aggByMaturity      =TRUE;
 aggByShellCondition=TRUE;
-cutpts             =seq(from=25,to=185,by=5);
+cutpts             =seq(from=50,to=190,by=5);
 truncate.low       =TRUE;
 truncate.high      =FALSE;
 verbosity          =0;
@@ -107,6 +108,6 @@ for (iY in uYs){
 }#--iY
 
 save(dfrZCs,dfrESs,
-     file=file.path(dirThs,"rda_Step2a_EmpiricalSelectivityFromBootstrapping.RData"));
+     file=file.path(dirThs,"rda_Step3a_EmpiricalSelectivityFromBootstrapping.RData"));
 
 

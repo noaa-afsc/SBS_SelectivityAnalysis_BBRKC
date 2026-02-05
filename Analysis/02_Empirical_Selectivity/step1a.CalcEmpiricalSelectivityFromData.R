@@ -1,7 +1,8 @@
 #--calculate empirical selectivity from data
 #----for BBRKC, sex is undetermined in McConnaughey dataset
 dirPrj = rstudioapi::getActiveProject();
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirThs = file.path(dirPrj,"Analysis/02_Empirical_Selectivity");
+setwd(dirThs);
 #--define output filename
 ofn = file.path(dirThs,"rda_Step1_EmpiricalSelectivityFromData.RData");
 

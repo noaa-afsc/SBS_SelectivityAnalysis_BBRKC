@@ -1,9 +1,8 @@
 #--plot SBS empirical selectivity bootstrapping results
 
 dirPrj = rstudioapi::getActiveProject();
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
-
-# source(file.path(dirThs,"r_PlotEmpiricalSelectivity.R"));
+dirThs = file.path(dirPrj,"Analysis/02_Empirical_Selectivity");
+setwd(dirThs);
 
 load(file=file.path(dirThs,"rda_Step3a_EmpiricalSelectivityFromBootstrapping.RData"));
 
@@ -33,29 +32,8 @@ plotEmpSel<-function(dfr,colour,z_lim=c(22.5,187.5),n_min=0,wrap=TRUE){
   return(p);
 }
 
-#--pdf("EmpiricalSelectivityFromBootstrapping.pdf",width=8,height=6);
-#--females
-dfrZCsp<-dfrZCs[(dfrZCs$x=="female")&dplyr::between(dfrZCs$z,25,125),];
-dfrESsp<-dfrESs[(dfrESs$x=="female")&dplyr::between(dfrZCs$z,25,125),];
-plotEmpSel(dfrESsp,colour=factor(y),z_lim=c(22.5,127.5),n_min=0,wrap=TRUE);
-plotEmpSel(dfrESsp,colour=factor(y),z_lim=c(22.5,127.5),n_min=0,wrap=FALSE);
-# plotEmpiricalSelectivity(dfrZCsp,dfrESsp,
-#                           plotPoints=FALSE,
-#                           points=list(alpha=0.2,size=0.5,dodge=2.5),
-#                           plotLines=FALSE,
-#                           plotViolins=TRUE,
-#                           plotSmooths=TRUE,
-#                           smooths=list(method="gam",formula=y~s(x,bs="cs",k=5),knots=c(25,50,75,100,125)));
-#--males
-dfrZCsp<-dfrZCs[(dfrZCs$x=="male")&(dfrZCs$z<=185),];
-dfrESsp<-dfrESs[(dfrESs$x=="male")&(dfrESs$z<=185),];
-plotEmpSel(dfrESsp,colour=factor(y),z_lim=c(22.5,187.5),n_min=0,wrap=TRUE);
-plotEmpSel(dfrESsp,colour=factor(y),z_lim=c(22.5,187.5),n_min=0,wrap=FALSE);
-# plotEmpiricalSelectivity(dfrZCsp,dfrESsp,
-#                           plotPoints=FALSE,
-#                           points=list(alpha=0.2,size=0.2,dodge=2.5),
-#                           plotLines=FALSE,
-#                           plotViolins=TRUE,
-#                           plotSmooths=TRUE,
-#                           smooths=list(method="gam",formula=y~s(x,bs="cs",k=7),knots=c(25,50,75,100,125,150,175)));
-#--dev.off();
+#--combined sexes
+dfrZCsp<-dfrZCs[dplyr::between(dfrZCs$z,50,190),];
+dfrESsp<-dfrESs[dplyr::between(dfrZCs$z,50,190),];
+plotEmpSel(dfrESsp,colour=factor(y),z_lim=c(47.5,192.5),n_min=0,wrap=TRUE);
+plotEmpSel(dfrESsp,colour=factor(y),z_lim=c(47.5,192.5),n_min=0,wrap=FALSE);

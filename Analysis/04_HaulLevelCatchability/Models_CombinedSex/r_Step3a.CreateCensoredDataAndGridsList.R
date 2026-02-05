@@ -1,6 +1,7 @@
 #--create list with censored data and prediction grids
 
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirPrj = rstudioapi::getActiveProject();
+dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability/Models_CombinedSex")
 
 #--get trimmed data----
 lst = wtsUtilities::getObj(file.path(dirThs,"../rda_Step2_TrimmedDataList.RData"));
@@ -11,7 +12,7 @@ dfrDat =  lst$lstTrimmedFinal$dfrDat |>
 
 #--extract characteristics from size and environmental data----
 ##--size----
-grd_z = seq(5,180,5)+2.5; med_z = 100.0; #--for males
+grd_z = seq(50,190,5)+2.5; med_z = 120.0; #--for males
 ##--depth----
 med_d = median(dfrDat$d,na.rm=TRUE); rng_d = range(dfrDat$d,na.rm=TRUE);
 grd_d = seq(from=rng_d[1],rng_d[2],length.out=50);
@@ -39,8 +40,8 @@ lbls  = list(z="size (mm CW)",d="depth (m)",t="temperature (deg C)",f="-log2(phi
 # so expF = SAMPLING_FACTOR/AREA_SWEPT).
 
 #--set sex
-x_ = "MALE";
+x_ = "UNDETERMINED";
 dfrDat   = dfrDat |> dplyr::filter(x==x_) |> dplyr::mutate(obsR=exp(lnR));
 
 lst = list(x=x_,dfrDat=dfrDat,meds=meds,grids=grids,lbls=lbls);
-wtsUtilities::saveObj(lst,file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.Males.RData"));
+wtsUtilities::saveObj(lst,file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.RData"));

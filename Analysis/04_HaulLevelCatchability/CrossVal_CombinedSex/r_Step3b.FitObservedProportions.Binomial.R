@@ -1,4 +1,4 @@
-#--fit various models for ln(r) using mgcv to fit GAMs for males using the BINOMIAL distribution----
+#--fit various models for proportions using mgcv to fit GAMs for combined sexes using the BINOMIAL distribution----
 require(DHARMa);
 require(dplyr);
 require(ggplot2);
@@ -6,31 +6,30 @@ require(gratia)
 require(mgcv);
 
 #--get censored data and prediction grids----
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirPrj = rstudioapi::getActiveProject();
+dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability/CrossVal_CombinedSex")
 lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.Males.RData"));
 
 #--remove zeros, infs, questionable observed Rs----
-dfrDatp   = lst$dfrDat |> dplyr::filter(between(z,15,150));
+dfrDatp   = lst$dfrDat |> dplyr::filter(between(z,50,190));
 
-#--BINOMIAL regression  models for lnR----
+#--BINOMIAL regression  models for p----
 famB = stats::binomial(link="logit");
 #--------ALL Z 2-WAY INTERACTIONS--------------------------
-  #--ln(r) = ti(z) + 
- #--         ti(d) + ti(t) + ti(f) + ti(s) +
-  #--        ti(z,d) + ti(z,t) + ti(z,f) +ti(z,s)
-  ks=c(20,10);
+  #--p = s(z) + 
+  #--         ti(d) + ti(t) + ti(f) + ti(s) +
+  #--         ti(z,d) + ti(z,t) + ti(z,f) +ti(z,s)
+  ks=c(10,6);
   k1 = ks[1]; k2 = ks[2];
-  frmla  = p~ti(z,bs="ts",k=k1)   +
+  frmla  = p~s(z,bs="ts",k=k1)   +
              ti(d,bs="ts",k=k2)   + ti(t,bs="ts",k=k2)   + ti(f,bs="ts",k=k2)   + ti(s,bs="ts",k=k2) +
              ti(z,d,bs="ts",k=c(k1,k2)) + ti(z,t,bs="ts",k=c(k1,k2)) + ti(z,f,bs="ts",k=c(k1,k2)) + ti(z,s,bs="ts",k=c(k1,k2));
-  # frmla  = p~ti(z,bs="ts",k=k1)   +
-  #            ti(d,bs="ts",k=k2)   + ti(t,bs="ts",k=k2) ;
   mdl_ZE2D  = mgcv::gam(frmla,family=famB,data=dfrDatp,select=FALSE,method="ML",fit=FALSE,
                          offset=lnq,weights=n);
 
 #--run cross-validation using concurvity and other criteria to rank models
 if (FALSE){
-#--run cross validation-------------------------------------------------
+  #--run cross validation-------------------------------------------------
   source(file.path(dirThs,"../r_gam.prefit.functions.R"));
   source(file.path(dirThs,"../r_EvalAllModelsFunctions.R"));
   source(file.path(dirThs,"../r_RunCrossValidationFunctions.R"));
@@ -42,7 +41,7 @@ if (FALSE){
     mdl,
     ks,
     dfrData=dfrDatp,
-    col_link="lnR",
+    col_link="lgtp",
     numFolds=20,
     selectBy="by_obs",
     concrv_opt=2,
@@ -51,8 +50,10 @@ if (FALSE){
     max_ncmbs=NULL,
     icmbs=NULL,
     log=TRUE,
-    debug=TRUE
+    debug=FALSE
   );
+  #--the above creates fold_x.RData and log_x.txt files in the working directory. 
+  ##--Make sure to move these to "ModelResults_BinomialModels" subfolder before further processing.
 }
 
 # if (FALSE){
@@ -64,11 +65,12 @@ if (FALSE){
   
 if (FALSE){
   #--process cross-validation folds to extract scores
-  dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+  dirPrj = rstudioapi::getActiveProject();
+  dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability/CrossVal_CombinedSex")
   numFolds = 20;
   lstCrsVal = list();
   for (f in 1:numFolds){
-    dfrFld = wtsUtilities::getObj(file.path(dirThs,"ModelResults_BinmoialModels",
+    dfrFld = wtsUtilities::getObj(file.path(dirThs,"ModelResults_BinomialModels",
                                             paste0("fold_",f,".RData"))) |> 
                dplyr::select(!c(lstMdl,lstTrn,lstTst));
     lstCrsVal[[f]] = dfrFld;
@@ -100,7 +102,7 @@ if (FALSE){
   wtsUtilities::saveObj(dfrMnScrs,file.path(dirThs,"rda_Step3b3a.BinomialModels_MnScrs.RData"));
   
   #--compare top 5 models + base by scores
-  sel_mdls = unique(c(dfrMnScrs[1:5,"smths"]$smths,"ti(z)"));
+  sel_mdls = unique(c(dfrMnScrs[1:5,"smths"]$smths,"s(z)"));
   p1 = ggplot(dfrScrs |> dplyr::filter(smths %in% sel_mdls) |> 
                 dplyr::mutate(smths=factor(smths,levels=sel_mdls)),
               aes(x=smths,y=scrTst)) + geom_boxplot() + geom_point() + 
@@ -116,7 +118,7 @@ if (FALSE){
   ggsave("pltBestModels.Males.Binomial.pdf",plot=p1,width=6.5,height=4)
   
   #--evaluate best model
-  best_smth = "ti(z)+ti(t)+ti(f)";#--user must determine this based on results above
+  best_smth = "s(z)";#--user must determine this based on results above
   best_idx  = (dfrMnScrs |> dplyr::filter(smths==best_smth))$i;
   best_mdl = evalBestModel(mdl,ks,best_idx);
   wtsUtilities::saveObj(best_mdl,file.path(dirThs,"rda_Step3b3b.BinomialModels_BestModel.RData"));
@@ -132,16 +134,16 @@ if (FALSE){
   plts1 = plotModelSmooths(best_mdl);
   
   grdPrd = list(z=lst$grids$z,d=lst$meds$d,t=lst$meds$t,f=lst$meds$f,s=lst$meds$s,h=factor("any"))
-  dfrPrd = prdMod(best_mdl,trms=c("(Intercept)","ti(z)"),type="link",lst=grdPrd,p=0.10) |> 
+  dfrPrd = prdMod(best_mdl,trms=c("(Intercept)","s(z)"),type="link",lst=grdPrd,p=0.10) |> 
             dplyr::mutate(emp_sel=exp(emp_sel),
                           lci=exp(lci),
                           uci=exp(uci));
-  plts2 = plotMod(dfrPrd);
+  plts2 = plotMod(dfrPrd,ylim=c(0,3));
   dfrPrd = prdMod(best_mdl,trms=c("all"),type="link",lst=grdPrd,p=0.10) |> 
             dplyr::mutate(emp_sel=exp(emp_sel),
                           lci=exp(lci),
                           uci=exp(uci));
-  plts3 = plotMod(dfrPrd);
+  plts3 = plotMod(dfrPrd,ylim=c(0,3));
 }
   
 if (FALSE){
@@ -151,7 +153,7 @@ if (FALSE){
   source(file.path(dirThs,"../r_PredictionsAndPlots.R"));
   mdl = mdl_ZE2D;
   dfrMnScrs = wtsUtilities::getObj(file.path(dirThs,"rda_Step3b3a.BinomialModels_MnScrs.RData"));
-  sel_mdls = unique(c(dfrMnScrs[1:5,"smths"]$smths,"ti(z)"));
+  sel_mdls = unique(c(dfrMnScrs[1:5,"smths"]$smths,"s(z)"));
   lstMdls = list();
   for (sel_mdl in sel_mdls[!is.na(sel_mdls)]){
     #--sel_mdl = sel_mdls[!is.na(sel_mdls)][1];
@@ -162,7 +164,7 @@ if (FALSE){
   grdPrd = list(z=lst$grids$z,d=lst$meds$d,t=lst$meds$t,f=lst$meds$f,s=lst$meds$s,h=factor("any"));
   lstPrd = list();
   for (sel_mdl in sel_mdls[!is.na(sel_mdls)]){
-    lstPrd[[sel_mdl]]  = prdMod(lstMdls[[sel_mdl]],trms=c("(Intercept)","ti(z)"),type="link",lst=grdPrd,p=0.10) |> 
+    lstPrd[[sel_mdl]]  = prdMod(lstMdls[[sel_mdl]],trms=c("(Intercept)","s(z)"),type="link",lst=grdPrd,p=0.10) |> 
                            dplyr::mutate(trms=sel_mdl);
   }
   dfrPrd = dplyr::bind_rows(lstPrd) |> 
@@ -172,7 +174,7 @@ if (FALSE){
   ggplot(dfrPrd,aes(x=z,y=emp_sel,ymin=lci,ymax=uci,colour=trms,fill=trms)) + 
     geom_ribbon(alpha=0.3) + geom_line() + 
     geom_hline(yintercept=c(0.0,0.5,1.0),linetype=3) + 
-    scale_y_continuous(limits=c(0,1.5),oob=scales::squish) + 
+    scale_y_continuous(limits=c(0,3.0),oob=scales::squish) + 
     labs(x="size (mm CW)",y="base selectivity",colour="model\nterms",fill="model\nterms") + 
     wtsPlots::getStdTheme() + 
     theme(legend.position="inside",

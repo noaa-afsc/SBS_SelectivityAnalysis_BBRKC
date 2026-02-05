@@ -6,11 +6,12 @@ require(gratia)
 require(mgcv);
 
 #--get censored data and prediction grids----
-dirThs = dirname(rstudioapi::getActiveDocumentContext()$path);
+dirPrj = rstudioapi::getActiveProject();
+dirThs = file.path(dirPrj,"Analysis/04_HaulLevelCatchability/CrossVal_CombinedSex")
 lst = wtsUtilities::getObj(file.path(dirThs,"rda_Step3a.CensoredDataAndGridsList.Males.RData"));
 
 #--remove zeros, infs, questionable observed Rs----
-dfrDatp   = lst$dfrDat |> dplyr::filter(obsR<10, between(z,15,150));
+dfrDatp   = lst$dfrDat |> dplyr::filter(obsR<10, between(z,50,190));
 lvls = c("any",unique(dfrDatp$h));
 dfrDatpp = dfrDatp |> dplyr::mutate(h=factor(h,levels=lvls));
 
@@ -45,7 +46,7 @@ if (FALSE){
 
   grdPrd = list(z=lst$grids$z,d=lst$meds$d,t=lst$meds$t,f=lst$meds$f,s=lst$meds$s,h=factor("any"))
   dfrPrd = prdMod(mdl,trms=c("all"),type="response",lst=grdPrd,p=0.10);
-  plotMod(dfrPrd)
+  plotMod(dfrPrd,ylims=c(0,3))
   
   #wtsUtilities::saveObj(??,file.path(dirThs,"rda_Step3b3.LnTweedieModels_RE.RData"));
 }

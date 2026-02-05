@@ -21,7 +21,7 @@ dirData_NMFS   <-"~/Work/StockAssessments-Crab/Data/Survey.NMFS.EBS/Current";
 fnStrata       <-file.path(dirData_NMFS,"TannerCrab_SurveyStrata.csv");
 fnHaulData_NMFS<-file.path(dirData_NMFS,"TannerCrab_HaulData.csv");
 #--BSFRF data
-dirData_BSFRF   <-"~/Work/StockAssessments-Crab/Data/Survey.BSFRF/AllSurveys";
+dirData_BSFRF   <-"~/Work/StockAssessments-Crab/Data/Survey.BSFRF/AllSurveys_TannerCrab";
 fnHaulData_BSFRF<-file.path(dirData_BSFRF,"rda_BSFRF.SBS.TannerCrabHaulData.RData");
 
 #--read NMFS strata definitions
